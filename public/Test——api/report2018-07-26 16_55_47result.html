@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>YILou FangDongDuan JieKou Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/Chart.js/0.2.0/Chart.min.js"></script>
+    <!-- <link href="https://cdn.bootcss.com/echarts/3.8.5/echarts.common.min.js" rel="stylesheet">   -->
+    
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         {  }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+	margin-left: 10px;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+    margin-left: 10px;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+    margin-left: 10px;
+}
+#header_row {
+    font-weight: bold;
+    color: #606060;
+    background-color: #f5f5f5;
+    border-top-width: 10px;
+    border-color: #d6e9c6;
+	font-size: 12px;
+}
+#result_table td {
+    border: 1px solid #f5f5f5;
+    padding: 2px;
+
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #d6e9c6; }
+.failClass  { background-color: #faebcc; }
+.errorClass { background-color: #ebccd1; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+/* -- chars ---------------------------------------------------------------------- */
+.testChars {margin-left: 150px;}
+
+.btn-info1 {
+    color: #fff;
+    background-color: #d6e9c6;
+    border-color: #d6e9c6;
+}
+
+.btn-info2 {
+    color: #fff;
+    background-color: #faebcc;
+    border-color: #faebcc;
+}
+
+.btn-info3 {
+    color: #fff;
+    background-color: #ebccd1;
+    border-color: #ebccd1;
+}
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>YILou FangDongDuan JieKou Test Report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2018-07-26 16:55:47</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:02.372136</p>
+<p class='attribute'><strong>Status:</strong> Pass 28</p>
+
+<p class='description'>fangdongduan</p>
+</div>
+
+<div style="float:left; margin-left: 10px;">
+	<p> Test Case Pie charts </p>
+	<a class="btn btn-xs btn-info1">-Pass-</a><br>
+	<a class="btn btn-xs btn-info2">-Faild-</a><br>
+	<a class="btn btn-xs btn-info3">-Error-</a><br>
+</div>
+
+<div class="testChars">
+	<canvas id="myChart" width="250" height="250"></canvas>
+</div>
+
+
+
+<p id='show_detail_line' style="margin-left: 10px;">Show
+<a href='javascript:showCase(0)' class="btn btn-xs btn-primary">Summary</a>
+<a href='javascript:showCase(1)' class="btn btn-xs btn-danger">Failed</a>
+<a href='javascript:showCase(2)' class="btn btn-xs btn-info">All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="panel-title">
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>api_test.FangYuanMenSuo: 房源房间信息</td>
+    <td>7</td>
+    <td>7</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',7)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getJointRentHouseDetail01: 获取合租房子详情,参数为0时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: {'message': '未找到有效房屋', 'timestamp': 1532595336106, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getJointRentHouseDetail02: 获取合租房子详情,参数为1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: {'message': 'success', 'timestamp': 1532595336237, 'errorCode': 0, 'data': {'houseModel': {'districtIdName': '宝山', 'subEstateId': 106727, 'spaceArea': 30000, 'houseCountInfo': None, 'latitude': '31.3777220000', 'houseId': None, 'districtId': 13, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': None, 'ventilationStr': '', 'building': '2', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '300', 'landlordContractImages': None, 'buildingId': 567395, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': None, 'roomNoStr': '', 'bizType': None, 'doorLockInfo': None, 'publishTime': None, 'estateId': 59671, 'houseEquipment': None, 'rentIds': None, 'roomType': None, 'contractBillInfos': None, 'rentId': 1, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 0, 'houseStatus': 1, 'genderRequirement': None, 'rentPrice': None, 'buildingName': '2号', 'ventilation': 0, 'room': '101', 'houseState': None, 'floor': 0, 'roomName': None, 'commonEquipment': '', 'expireDays': None, 'danyuan': '', 'maxPerHouseJointRentRoomNum': 30, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 1, 'wcSum': 1, 'townName': '杨行', 'id': 1, 'allRentTag': 0, 'layers': 14, 'payMethodStr': '', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': None, 'jointRentRoomNum': 0, 'roomVentilation': None, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '杨泰路268弄', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': None, 'constructDate': 2008, 'houseEquipmentStr': '', 'decorateLevel': 0, 'desc': '', 'userId': 0, 'roomStr': '101', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '', 'longitude': '121.4491350000', 'payRentDays': None, 'hasContract': None, 'estateName': '杨泰阳光苑', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': None, 'source': None, 'roomNo': None, 'notRentDays': None, 'roomTypeStr': '', 'cityName': None, 'decorateLevelDesc': '', 'contractId': None, 'rentStatus': 0, 'avgPrice': '', 'payMethod': None, 'upSize': 0, 'decorateType': 0, 'onlyOne': None, 'townId': 8871, 'downSize': 0, 'districtName': '宝山', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '', 'cityId': 0, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getJointRentHouseDetail03: 获取合租房子详情,参数为100时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: {'message': 'success', 'timestamp': 1532595336359, 'errorCode': 0, 'data': {'houseModel': {'districtIdName': '浦东', 'subEstateId': 102895, 'spaceArea': 25800, 'houseCountInfo': None, 'latitude': '31.1751410000', 'houseId': None, 'districtId': 12, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': None, 'ventilationStr': '南北', 'building': '2', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '258', 'landlordContractImages': None, 'buildingId': 1273336, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': None, 'roomNoStr': '', 'bizType': None, 'doorLockInfo': None, 'publishTime': None, 'estateId': 56052, 'houseEquipment': None, 'rentIds': None, 'roomType': None, 'contractBillInfos': None, 'rentId': 100, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 0, 'houseStatus': 1, 'genderRequirement': None, 'rentPrice': None, 'buildingName': '2号', 'ventilation': 5, 'room': '102', 'houseState': None, 'floor': 2, 'roomName': None, 'commonEquipment': '', 'expireDays': None, 'danyuan': '', 'maxPerHouseJointRentRoomNum': 30, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 1, 'wcSum': 1, 'townName': '川沙', 'id': 100, 'allRentTag': 0, 'layers': 2, 'payMethodStr': '', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': None, 'jointRentRoomNum': 0, 'roomVentilation': None, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '军民路65弄', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': None, 'constructDate': 0, 'houseEquipmentStr': '', 'decorateLevel': 0, 'desc': '', 'userId': 0, 'roomStr': '102', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '', 'longitude': '121.7599820000', 'payRentDays': None, 'hasContract': None, 'estateName': '军民路65弄小区', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': None, 'source': None, 'roomNo': None, 'notRentDays': None, 'roomTypeStr': '', 'cityName': None, 'decorateLevelDesc': '', 'contractId': None, 'rentStatus': 0, 'avgPrice': '', 'payMethod': None, 'upSize': 0, 'decorateType': 0, 'onlyOne': None, 'townId': 6447, 'downSize': 0, 'districtName': '浦东', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '', 'cityId': 0, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_houseDetail1: 获取房间详情,参数为0时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: {'message': '未找到有效房源', 'timestamp': 1532595336408, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listJointRentRoom01: 获取合租房间列表,参数为0时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: {'message': 'success', 'timestamp': 1532595336460, 'errorCode': 0, 'data': {'jointRentRoomModelList': None}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listJointRentRoom02: 获取合租房间列表,参数为678时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: {'message': 'success', 'timestamp': 1532595336617, 'errorCode': 0, 'data': {'jointRentRoomModelList': [{'districtIdName': '闸北', 'subEstateId': 87093, 'spaceArea': 2400, 'houseCountInfo': None, 'latitude': '31.2656140000', 'houseId': 678, 'districtId': 10, 'houseEquipmentList': [1, 4, 5, 10, 11], 'livingRoomSum': 1, 'publishTimeStr': '2018-01-15', 'ventilationStr': '南', 'building': '0', 'auditFailSize': 0, 'memo': '你是谁在我面前说一句话是真的是', 'spaceAreaStr': '24', 'landlordContractImages': None, 'buildingId': 1239522, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': None, 'roomNoStr': '房间01', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1516012700000, 'estateId': 5747, 'houseEquipment': '1,4,5,10,11', 'rentIds': [602], 'roomType': 2, 'contractBillInfos': [{'rentId': 602, 'rental': 250000, 'contractStatus': 1, 'renterId': 10003, 'rentalStr': '2500', 'renterMobile': '18621512473', 'paymentDate': '2018-02-24', 'endDate': '2019-02-23', 'renterName': '房东', 'paymentType': '季付', 'paymentCycle': 3, 'bindIdentity': 2, 'overdueBillCount': 2, 'reSign': 0, 'startDate': '2018-02-24', 'oldManPwd': 0, 'contractId': 739}], 'rentId': 602, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 2, 'genderRequirement': 1, 'rentPrice': 250000, 'buildingName': '', 'ventilation': 3, 'room': '601', 'houseState': 4, 'floor': 6, 'roomName': '南24平', 'commonEquipment': '6,8,3,7,9', 'expireDays': 212, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '冰箱，宽带，洗衣机，热水器，可做饭', 'bedroomSum': 3, 'wcSum': 2, 'townName': '不夜城', 'id': 602, 'allRentTag': 0, 'layers': 11, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 1, 'jointRentRoomNum': None, 'roomVentilation': None, 'signDateStr': '2018-02-24', 'sellTag': 0, 'subEstateName': '中山北路828号', 'commonEquipmentList': [6, 8, 3, 7, 9], 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': 2007, 'houseEquipmentStr': '床，空调，电视，阳台，独立卫生间', 'decorateLevel': None, 'desc': None, 'userId': 10041, 'roomStr': '601', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '2500', 'longitude': '121.4635310000', 'payRentDays': -152, 'hasContract': None, 'estateName': '中山北路828号', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 1, 'source': None, 'roomNo': '01', 'notRentDays': None, 'roomTypeStr': '次卧', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': 739, 'rentStatus': 2, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 5054, 'downSize': 0, 'districtName': '闸北', 'bindAndCheck': False, 'contractBillInfo': {'rentId': 602, 'rental': 250000, 'contractStatus': 1, 'renterId': 10003, 'rentalStr': '2500', 'renterMobile': '18621512473', 'paymentDate': '2018-02-24', 'endDate': '2019-02-23', 'renterName': '房东', 'paymentType': '季付', 'paymentCycle': 3, 'bindIdentity': 2, 'overdueBillCount': 2, 'reSign': 0, 'startDate': '2018-02-24', 'oldManPwd': 0, 'contractId': 739}, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}]}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_myHouseList1: 获取房源列表</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: {'message': 'success', 'timestamp': 1532595336904, 'errorCode': 0, 'data': {'total': 7, 'hasNextPage': False, 'rows': [{'districtIdName': '闵行', 'subEstateId': 82483, 'spaceArea': 0, 'houseCountInfo': None, 'latitude': '31.2161510000', 'houseId': None, 'districtId': 14, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': None, 'ventilationStr': '南北', 'building': '1', 'auditFailSize': 0, 'memo': None, 'spaceAreaStr': '0', 'landlordContractImages': None, 'buildingId': 514357, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': 2768, 'roomNoStr': '', 'bizType': None, 'doorLockInfo': None, 'publishTime': None, 'estateId': 22159, 'houseEquipment': None, 'rentIds': [2768], 'roomType': None, 'contractBillInfos': None, 'rentId': 1409, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 0, 'houseStatus': 4, 'genderRequirement': None, 'rentPrice': None, 'buildingName': '1号', 'ventilation': 5, 'room': '0001', 'houseState': None, 'floor': 0, 'roomName': None, 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': [{'districtIdName': '闵行', 'subEstateId': 82483, 'spaceArea': 0, 'houseCountInfo': None, 'latitude': '31.2161510000', 'houseId': 1409, 'districtId': 14, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-11', 'ventilationStr': '南北', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '0', 'landlordContractImages': None, 'buildingId': 514357, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14', 'allRentId': 2768, 'roomNoStr': '房间00', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1531293380000, 'estateId': 22159, 'houseEquipment': '', 'rentIds': [2768], 'roomType': 0, 'contractBillInfos': None, 'rentId': 2768, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 0, 'houseStatus': 4, 'genderRequirement': 0, 'rentPrice': 1111100, 'buildingName': '1号', 'ventilation': 5, 'room': '0001', 'houseState': 1, 'floor': 0, 'roomName': '', 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 1, 'wcSum': 1, 'townName': '华漕', 'id': 2768, 'allRentTag': 1, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 3, 'jointRentRoomNum': None, 'roomVentilation': 5, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '诸新路388弄', 'commonEquipmentList': None, 'houseImages': [{'imageTag': '厨房', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/11/c62768d60fc4453a8d771643302c450d!d_w_b_jpg', 'status': 2, 'houseInfoId': 2768, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531294465000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/11/c62768d60fc4453a8d771643302c450d!d_w_s_jpg', 'createTime': 1531294370000, 'houseId': 1409, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/11/c62768d60fc4453a8d771643302c450d!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531294465000, 'imageType': 1, 'source': 1, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/11/c62768d60fc4453a8d771643302c450d', 'sort': 1, 'auditOperatorId': 76545, 'id': 3995}], 'auditingSize': 0, 'rentType': 1, 'constructDate': 2006, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 0, 'rentPriceStr': '11111', 'longitude': '121.2934850000', 'payRentDays': None, 'hasContract': None, 'estateName': '万科红郡一期', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 1, 'source': None, 'roomNo': '00', 'notRentDays': 1, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 9543, 'downSize': 0, 'districtName': '闵行', 'bindAndCheck': True, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': True}], 'commonEquipmentStr': '', 'bedroomSum': 1, 'wcSum': 1, 'townName': '华漕', 'id': 1409, 'allRentTag': 1, 'layers': 0, 'payMethodStr': '', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': None, 'jointRentRoomNum': None, 'roomVentilation': None, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '诸新路388弄', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 1, 'constructDate': 2006, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '', 'longitude': '121.2934850000', 'payRentDays': None, 'hasContract': None, 'estateName': '万科红郡一期', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 1, 'source': None, 'roomNo': None, 'notRentDays': None, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': None, 'upSize': 0, 'decorateType': 0, 'onlyOne': None, 'townId': 9543, 'downSize': 0, 'districtName': '闵行', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}, {'districtIdName': '普陀', 'subEstateId': 187733, 'spaceArea': 0, 'houseCountInfo': None, 'latitude': '31.2978120000', 'houseId': None, 'districtId': 11, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': None, 'ventilationStr': '', 'building': '1', 'auditFailSize': 0, 'memo': None, 'spaceAreaStr': '0', 'landlordContractImages': None, 'buildingId': 2630043, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': None, 'roomNoStr': '', 'bizType': None, 'doorLockInfo': None, 'publishTime': None, 'estateId': 127885, 'houseEquipment': None, 'rentIds': [2766, 2767], 'roomType': None, 'contractBillInfos': None, 'rentId': 1408, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': None, 'rentPrice': None, 'buildingName': '1号', 'ventilation': 0, 'room': '0001', 'houseState': None, 'floor': 0, 'roomName': None, 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': [{'districtIdName': '普陀', 'subEstateId': 187733, 'spaceArea': 35600, 'houseCountInfo': None, 'latitude': '31.2978120000', 'houseId': 1408, 'districtId': 11, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-10', 'ventilationStr': '南', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '356', 'landlordContractImages': None, 'buildingId': 2630043, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14,15', 'allRentId': None, 'roomNoStr': '房间01', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1531216407000, 'estateId': 127885, 'houseEquipment': '', 'rentIds': [2766, 2767], 'roomType': 0, 'contractBillInfos': None, 'rentId': 2766, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': 1, 'rentPrice': 68600, 'buildingName': '1号', 'ventilation': 3, 'room': '0001', 'houseState': 1, 'floor': 0, 'roomName': '南356平', 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '桃浦', 'id': 2766, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 3, 'jointRentRoomNum': None, 'roomVentilation': 3, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '荣和家园', 'commonEquipmentList': None, 'houseImages': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/b656ac0576614d0885b51173265d7af9!d_w_b_jpg', 'status': 1, 'houseInfoId': 2766, 'failReasonStr': '', 'failReason': 0, 'auditTime': None, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/b656ac0576614d0885b51173265d7af9!d_w_s_jpg', 'createTime': 1531918305000, 'houseId': 1408, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/b656ac0576614d0885b51173265d7af9!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531918305000, 'imageType': 1, 'source': 1, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/b656ac0576614d0885b51173265d7af9', 'sort': 1, 'auditOperatorId': 0, 'id': 4014}], 'auditingSize': 0, 'rentType': 3, 'constructDate': None, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 35600, 'rentPriceStr': '686', 'longitude': '121.3963110000', 'payRentDays': None, 'hasContract': None, 'estateName': '荣和家园', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 2, 'source': None, 'roomNo': '01', 'notRentDays': 2, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 5752, 'downSize': 0, 'districtName': '普陀', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}, {'districtIdName': '普陀', 'subEstateId': 187733, 'spaceArea': 36500, 'houseCountInfo': None, 'latitude': '31.2978120000', 'houseId': 1408, 'districtId': 11, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-10', 'ventilationStr': '南', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '365', 'landlordContractImages': None, 'buildingId': 2630043, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14,15', 'allRentId': None, 'roomNoStr': '房间02', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1531216407000, 'estateId': 127885, 'houseEquipment': '', 'rentIds': [2766, 2767], 'roomType': 0, 'contractBillInfos': None, 'rentId': 2767, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': 1, 'rentPrice': 2200, 'buildingName': '1号', 'ventilation': 3, 'room': '0001', 'houseState': 1, 'floor': 0, 'roomName': '南365平', 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '桃浦', 'id': 2767, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 3, 'jointRentRoomNum': None, 'roomVentilation': 3, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '荣和家园', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': None, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 36500, 'rentPriceStr': '22', 'longitude': '121.3963110000', 'payRentDays': None, 'hasContract': None, 'estateName': '荣和家园', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 2, 'source': None, 'roomNo': '02', 'notRentDays': 2, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 5752, 'downSize': 0, 'districtName': '普陀', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}], 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '桃浦', 'id': 1408, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': None, 'jointRentRoomNum': None, 'roomVentilation': None, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '荣和家园', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': None, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '', 'longitude': '121.3963110000', 'payRentDays': None, 'hasContract': None, 'estateName': '荣和家园', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 2, 'source': None, 'roomNo': None, 'notRentDays': None, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': None, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 5752, 'downSize': 0, 'districtName': '普陀', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}, {'districtIdName': '闵行', 'subEstateId': 70017, 'spaceArea': 0, 'houseCountInfo': None, 'latitude': '31.1588870000', 'houseId': None, 'districtId': 14, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': None, 'ventilationStr': '', 'building': '1', 'auditFailSize': 0, 'memo': None, 'spaceAreaStr': '0', 'landlordContractImages': None, 'buildingId': 115377, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': None, 'roomNoStr': '', 'bizType': None, 'doorLockInfo': None, 'publishTime': None, 'estateId': 10339, 'houseEquipment': None, 'rentIds': [2759, 2760], 'roomType': None, 'contractBillInfos': None, 'rentId': 1404, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': None, 'rentPrice': None, 'buildingName': '1号', 'ventilation': 0, 'room': '0001', 'houseState': None, 'floor': 0, 'roomName': None, 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': [{'districtIdName': '闵行', 'subEstateId': 70017, 'spaceArea': 3600, 'houseCountInfo': None, 'latitude': '31.1588870000', 'houseId': 1404, 'districtId': 14, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-05', 'ventilationStr': '南', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '36', 'landlordContractImages': None, 'buildingId': 115377, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14,15', 'allRentId': None, 'roomNoStr': '房间01', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1530770693000, 'estateId': 10339, 'houseEquipment': '', 'rentIds': [2759, 2760], 'roomType': 0, 'contractBillInfos': None, 'rentId': 2759, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': 1, 'rentPrice': 5500, 'buildingName': '1号', 'ventilation': 3, 'room': '0001', 'houseState': 1, 'floor': 0, 'roomName': '南36平', 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '七宝', 'id': 2759, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 3, 'jointRentRoomNum': None, 'roomVentilation': 3, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '新龙路1111弄', 'commonEquipmentList': None, 'houseImages': [{'imageTag': '独卫', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/8688d08b53384ca7b847e31bd40ef85d!d_w_b_jpg', 'status': 1, 'houseInfoId': 2759, 'failReasonStr': '', 'failReason': 0, 'auditTime': None, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/8688d08b53384ca7b847e31bd40ef85d!d_w_s_jpg', 'createTime': 1531916331000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/8688d08b53384ca7b847e31bd40ef85d!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531916331000, 'imageType': 1, 'source': 1, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/8688d08b53384ca7b847e31bd40ef85d', 'sort': 1, 'auditOperatorId': 0, 'id': 4013}], 'auditingSize': 0, 'rentType': 3, 'constructDate': 2005, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 3600, 'rentPriceStr': '55', 'longitude': '121.3476470000', 'payRentDays': None, 'hasContract': None, 'estateName': '万科·朗润园', 'commonHouseImages': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_b_jpg', 'status': 2, 'houseInfoId': 0, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531917659000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_s_jpg', 'createTime': 1531916190000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531917659000, 'imageType': 2, 'source': 0, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af', 'sort': 1, 'auditOperatorId': 62814, 'id': 4012}], 'houseImageList': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_b_jpg', 'status': 2, 'houseInfoId': 0, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531917659000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_s_jpg', 'createTime': 1531916190000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531917659000, 'imageType': 2, 'source': 0, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af', 'sort': 1, 'auditOperatorId': 62814, 'id': 4012}], 'roomCount': 2, 'source': None, 'roomNo': '01', 'notRentDays': 3, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 9553, 'downSize': 0, 'districtName': '闵行', 'bindAndCheck': True, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': True}, {'districtIdName': '闵行', 'subEstateId': 70017, 'spaceArea': 36900, 'houseCountInfo': None, 'latitude': '31.1588870000', 'houseId': 1404, 'districtId': 14, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-05', 'ventilationStr': '南', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '369', 'landlordContractImages': None, 'buildingId': 115377, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14,15', 'allRentId': None, 'roomNoStr': '房间02', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1530770693000, 'estateId': 10339, 'houseEquipment': '', 'rentIds': [2759, 2760], 'roomType': 0, 'contractBillInfos': None, 'rentId': 2760, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': 1, 'rentPrice': 25800, 'buildingName': '1号', 'ventilation': 3, 'room': '0001', 'houseState': 1, 'floor': 0, 'roomName': '南369平', 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '七宝', 'id': 2760, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 3, 'jointRentRoomNum': None, 'roomVentilation': 3, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '新龙路1111弄', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': 2005, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 36900, 'rentPriceStr': '258', 'longitude': '121.3476470000', 'payRentDays': None, 'hasContract': None, 'estateName': '万科·朗润园', 'commonHouseImages': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_b_jpg', 'status': 2, 'houseInfoId': 0, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531917659000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_s_jpg', 'createTime': 1531916190000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531917659000, 'imageType': 2, 'source': 0, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af', 'sort': 1, 'auditOperatorId': 62814, 'id': 4012}], 'houseImageList': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_b_jpg', 'status': 2, 'houseInfoId': 0, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531917659000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_s_jpg', 'createTime': 1531916190000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531917659000, 'imageType': 2, 'source': 0, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af', 'sort': 1, 'auditOperatorId': 62814, 'id': 4012}], 'roomCount': 2, 'source': None, 'roomNo': '02', 'notRentDays': 3, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 9553, 'downSize': 0, 'districtName': '闵行', 'bindAndCheck': True, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': True}], 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '七宝', 'id': 1404, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': None, 'jointRentRoomNum': None, 'roomVentilation': None, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '新龙路1111弄', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': 2005, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '', 'longitude': '121.3476470000', 'payRentDays': None, 'hasContract': None, 'estateName': '万科·朗润园', 'commonHouseImages': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_b_jpg', 'status': 2, 'houseInfoId': 0, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531917659000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_s_jpg', 'createTime': 1531916190000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531917659000, 'imageType': 2, 'source': 0, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af', 'sort': 1, 'auditOperatorId': 62814, 'id': 4012}], 'houseImageList': [{'imageTag': '', 'imgUrlBig': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_b_jpg', 'status': 2, 'houseInfoId': 0, 'failReasonStr': '', 'failReason': 0, 'auditTime': 1531917659000, 'imgUrlSmall': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_s_jpg', 'createTime': 1531916190000, 'houseId': 1404, 'imgUrlMiddle': 'http://images.yuyanfd.com/fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af!d_w_m_jpg', 'failMemo': '', 'updateTime': 1531917659000, 'imageType': 2, 'source': 0, 'valid': 1, 'imageOssKey': 'fdbimg/2018/7/18/4cde9f6e28d3417f8f86fb17bc2e69af', 'sort': 1, 'auditOperatorId': 62814, 'id': 4012}], 'roomCount': 2, 'source': None, 'roomNo': None, 'notRentDays': None, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 1, 'avgPrice': '', 'payMethod': None, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 9553, 'downSize': 0, 'districtName': '闵行', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}, {'districtIdName': '浦东', 'subEstateId': 197216, 'spaceArea': 0, 'houseCountInfo': None, 'latitude': '31.2513350000', 'houseId': None, 'districtId': 12, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': None, 'ventilationStr': '', 'building': '1', 'auditFailSize': 0, 'memo': None, 'spaceAreaStr': '0', 'landlordContractImages': None, 'buildingId': 2629948, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': None, 'allRentId': None, 'roomNoStr': '', 'bizType': None, 'doorLockInfo': None, 'publishTime': None, 'estateId': 133604, 'houseEquipment': None, 'rentIds': [2754, 2755], 'roomType': None, 'contractBillInfos': None, 'rentId': 1401, 'holdYear': None, 'genderRequirementStr': '', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': None, 'rentPrice': None, 'buildingName': '1号', 'ventilation': 0, 'room': '0001', 'houseState': None, 'floor': 0, 'roomName': None, 'commonEquipment': '', 'expireDays': None, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': [{'districtIdName': '浦东', 'subEstateId': 197216, 'spaceArea': 35600, 'houseCountInfo': None, 'latitude': '31.2513350000', 'houseId': 1401, 'districtId': 12, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-03', 'ventilationStr': '南', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '356', 'landlordContractImages': None, 'buildingId': 2629948, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14,15', 'allRentId': None, 'roomNoStr': '房间01', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1530584316000, 'estateId': 133604, 'houseEquipment': '', 'rentIds': [2754, 2755], 'roomType': 0, 'contractBillInfos': [{'rentId': 2754, 'rental': 100, 'contractStatus': 1, 'renterId': 11196, 'rentalStr': '1', 'renterMobile': '13766005678', 'paymentDate': '2018-07-20', 'endDate': '2019-07-19', 'renterName': '余明世', 'paymentType': '月付', 'paymentCycle': 1, 'bindIdentity': 1, 'overdueBillCount': 2, 'reSign': 0, 'startDate': '2018-07-20', 'oldManPwd': 1, 'contractId': 3212}], 'rentId': 2754, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': 1, 'rentPrice': 5800, 'buildingName': '1号', 'ventilation': 3, 'room': '0001', 'houseState': 4, 'floor': 0, 'roomName': '南356平', 'commonEquipment': '', 'expireDays': 358, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '源深', 'id': 2754, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 1, 'jointRentRoomNum': None, 'roomVentilation': 3, 'signDateStr': '2018-07-20', 'sellTag': 0, 'subEstateName': '滨江万科中心', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': None, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 35600, 'rentPriceStr': '58', 'longitude': '121.5456110000', 'payRentDays': -6, 'hasContract': None, 'estateName': '滨江万科中心', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 2, 'source': None, 'roomNo': '01', 'notRentDays': None, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': 3212, 'rentStatus': 2, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 6470, 'downSize': 0, 'districtName': '浦东', 'bindAndCheck': False, 'contractBillInfo': {'rentId': 2754, 'rental': 100, 'contractStatus': 1, 'renterId': 11196, 'rentalStr': '1', 'renterMobile': '13766005678', 'paymentDate': '2018-07-20', 'endDate': '2019-07-19', 'renterName': '余明世', 'paymentType': '月付', 'paymentCycle': 1, 'bindIdentity': 1, 'overdueBillCount': 2, 'reSign': 0, 'startDate': '2018-07-20', 'oldManPwd': 1, 'contractId': 3212}, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}, {'districtIdName': '浦东', 'subEstateId': 197216, 'spaceArea': 36500, 'houseCountInfo': None, 'latitude': '31.2513350000', 'houseId': 1401, 'districtId': 12, 'houseEquipmentList': None, 'livingRoomSum': 0, 'publishTimeStr': '2018-07-03', 'ventilationStr': '南', 'building': '1', 'auditFailSize': 0, 'memo': '', 'spaceAreaStr': '365', 'landlordContractImages': None, 'buildingId': 2629948, 'sellPriceStr': '', 'loan': None, 'rentRequiredField': '1,3,4,9,10,11,12,13,14,15', 'allRentId': None, 'roomNoStr': '房间02', 'bizType': None, 'doorLockInfo': None, 'publishTime': 1530584316000, 'estateId': 133604, 'houseEquipment': '', 'rentIds': [2754, 2755], 'roomType': 0, 'contractBillInfos': [{'rentId': 2755, 'rental': 300, 'contractStatus': 1, 'renterId': 11080, 'rentalStr': '3', 'renterMobile': '17400330095', 'paymentDate': '2018-07-25', 'endDate': '2019-07-24', 'renterName': '袁梅莲', 'paymentType': '月付', 'paymentCycle': 1, 'bindIdentity': 1, 'overdueBillCount': 2, 'reSign': 0, 'startDate': '2018-07-25', 'oldManPwd': 1, 'contractId': 3297}], 'rentId': 2755, 'holdYear': None, 'genderRequirementStr': '男女不限', 'jointRentTag': 1, 'houseStatus': 4, 'genderRequirement': 1, 'rentPrice': 128800, 'buildingName': '1号', 'ventilation': 3, 'room': '0001', 'houseState': 4, 'floor': 0, 'roomName': '南365平', 'commonEquipment': '', 'expireDays': 363, 'danyuan': None, 'maxPerHouseJointRentRoomNum': None, 'jointRentRoomModelList': None, 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '源深', 'id': 2755, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '押一付三', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': 1, 'jointRentRoomNum': None, 'roomVentilation': 3, 'signDateStr': '2018-07-25', 'sellTag': 0, 'subEstateName': '滨江万科中心', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': None, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': 36500, 'rentPriceStr': '1288', 'longitude': '121.5456110000', 'payRentDays': -1, 'hasContract': None, 'estateName': '滨江万科中心', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 2, 'source': None, 'roomNo': '02', 'notRentDays': None, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': 3297, 'rentStatus': 2, 'avgPrice': '', 'payMethod': 2, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 6470, 'downSize': 0, 'districtName': '浦东', 'bindAndCheck': False, 'contractBillInfo': {'rentId': 2755, 'rental': 300, 'contractStatus': 1, 'renterId': 11080, 'rentalStr': '3', 'renterMobile': '17400330095', 'paymentDate': '2018-07-25', 'endDate': '2019-07-24', 'renterName': '袁梅莲', 'paymentType': '月付', 'paymentCycle': 1, 'bindIdentity': 1, 'overdueBillCount': 2, 'reSign': 0, 'startDate': '2018-07-25', 'oldManPwd': 1, 'contractId': 3297}, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}], 'commonEquipmentStr': '', 'bedroomSum': 0, 'wcSum': 0, 'townName': '源深', 'id': 1401, 'allRentTag': 0, 'layers': 0, 'payMethodStr': '', 'layoutHouseImages': None, 'ylChannelHouseState': None, 'lookState': None, 'jointRentRoomNum': None, 'roomVentilation': None, 'signDateStr': None, 'sellTag': 0, 'subEstateName': '滨江万科中心', 'commonEquipmentList': None, 'houseImages': None, 'auditingSize': 0, 'rentType': 3, 'constructDate': None, 'houseEquipmentStr': '', 'decorateLevel': None, 'desc': None, 'userId': 10003, 'roomStr': '0001', 'valid': 1, 'roomSpaceArea': None, 'rentPriceStr': '', 'longitude': '121.5456110000', 'payRentDays': None, 'hasContract': None, 'estateName': '滨江万科中心', 'commonHouseImages': None, 'houseImageList': None, 'roomCount': 2, 'source': None, 'roomNo': None, 'notRentDays': None, 'roomTypeStr': '', 'cityName': '上海', 'decorateLevelDesc': None, 'contractId': None, 'rentStatus': 2, 'avgPrice': '', 'payMethod': None, 'upSize': 0, 'decorateType': 3, 'onlyOne': None, 'townId': 6470, 'downSize': 0, 'districtName': '浦东', 'bindAndCheck': False, 'contractBillInfo': None, 'decorateTypeStr': '精装', 'cityId': 2, 'sellPrice': None, 'lookApplyState': 2, 'gateOrRoomInstallLock': False}]}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>api_test.ListDoorTempPWD: 获取门锁临时密码列表</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',3)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listDoorTempPWD01: success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: {'message': 'success', 'timestamp': 1532595336963, 'errorCode': 0, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listDoorTempPWD02: 该门锁不存在</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: {'message': '该门锁不存在', 'timestamp': 1532595337016, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listDoorTempPWD03: 该门锁不存在</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: {'message': '参数doorId不能为 null', 'timestamp': 1532595337054, 'errorCode': 100001, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>api_test.LitDoorOpen: 获取门锁开门记录</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',3)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listDoorOpen01: 该门锁不存在</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: {'message': '该门锁不存在', 'timestamp': 1532595337099, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listDoorOpen02: 参数doorId不能为 null</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        pass</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: {'message': '参数doorId不能为 null', 'timestamp': 1532595337140, 'errorCode': 100001, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_listDoorOpen03: success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        pass</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: {'message': 'success', 'timestamp': 1532595337196, 'errorCode': 0, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>api_test.MenSuo: 门锁基本信息</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',4)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getDoorBaseInfo01: 门锁不存在</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: {'message': '门锁不存在', 'timestamp': 1532595337246, 'errorCode': 100001, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getDoorBaseInfo02: doorId传入字符串</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: {'message': '服务繁忙，请稍后重试', 'timestamp': 1532595337284, 'errorCode': -1, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getDoorBaseInfo03: 您没有权限</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: {'message': '您没有权限', 'timestamp': 1532595337335, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getDoorBaseInfo04: success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: {'message': 'success', 'timestamp': 1532595337573, 'errorCode': 0, 'data': {'supportBluetooth': 0, 'qrCodeNo': '', 'bind': 0, 'estateName': '绿地名人坊', 'validUserCount': 69, 'buildingName': '1', 'canAddTempDoorPwd': True, 'houseId': 754, 'needInitPwd': False, 'freezeUserCount': 52, 'roomNo': None, 'subEstateName': '中华路429弄', 'state': 0, 'rentId': 0, 'canUpdatePwd': False, 'roomName': '101', 'hasContract': False, 'rentType': 3, 'openTimes': 0, 'hasWifi': None, 'electric': None, 'doorType': 1, 'lockBrand': 1, 'device': '', 'doorStatus': 1}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>api_test.ShiMingRenzheng: 房东端实名认证接口验证</td>
+    <td>10</td>
+    <td>10</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',10)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_bindIdentity01: 姓名身份证匹配失败</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: {'message': '姓名身份证匹配失败', 'timestamp': 1532595337632, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_bindIdentity02: 参数 name 不能为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        pass</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: {'message': '参数 name 不能为空', 'timestamp': 1532595337681, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_bindIdentity03: idCard为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')" >
+        pass</a>
+
+    <div id='div_pt5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.3: {'message': '参数 idCard 不能为空', 'timestamp': 1532595337736, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getCardBin01: 获取银行卡开户行</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.4')" >
+        pass</a>
+
+    <div id='div_pt5.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.4: {'message': 'success', 'timestamp': 1532595337908, 'errorCode': 0, 'data': {'cardTypeName': 'CC', 'bankCode': 'CMB', 'timeLimitStr': '单笔5千元', 'cardName': 'VISA信用卡', 'cardType': 2, 'bankName': '招商银行', 'dayLimitStr': '单日1万元'}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getSupportBankList: 获取支持银行列表</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.5')" >
+        pass</a>
+
+    <div id='div_pt5.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.5: {'message': 'success', 'timestamp': 1532595337961, 'errorCode': 0, 'data': [{'bankCode': 'CMB', 'bankMobile': None, 'dayLimit': 10000, 'monthLimit': 0, 'cardType': 9, 'bankName': '招商银行', 'timeLimit': 5000, 'secondTimeLimit': 0, 'dayLimitStr': '单日1万元', 'icon': 'http://files.iwjw.com/resource/userapp/bankicon/zhaoshang.png', 'cardId': 260, 'timeLimitStr': '单笔5千元', 'minTimeLimit': 111.0, 'firstTimeLimit': 0, 'notes': None}, {'bankCode': 'CCB', 'bankMobile': None, 'dayLimit': 50000, 'monthLimit': 0, 'cardType': 9, 'bankName': '建设银行', 'timeLimit': 50000, 'secondTimeLimit': 0, 'dayLimitStr': '单日5万元', 'icon': 'http://pic-cdn.35pic.com/58pic/13/54/13/66858PICa6t.jpg', 'cardId': 262, 'timeLimitStr': '单笔5万元', 'minTimeLimit': 1.0, 'firstTimeLimit': 0, 'notes': None}]}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_realname_register01: 实名信息已存在</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.6')" >
+        pass</a>
+
+    <div id='div_pt5.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.6: {'message': '实名信息已存在，不能重复', 'timestamp': 1532595338008, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_realname_register02: 身份证格式不合法</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.7')" >
+        pass</a>
+
+    <div id='div_pt5.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.7: {'message': '身份证格式不合法', 'timestamp': 1532595338054, 'errorCode': 100002, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_realname_register03: 姓名为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.8')" >
+        pass</a>
+
+    <div id='div_pt5.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.8: {'message': '姓名不能为空', 'timestamp': 1532595338093, 'errorCode': 100001, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_realname_register04: 参数都为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.9')" >
+        pass</a>
+
+    <div id='div_pt5.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.9: {'message': '姓名不能为空', 'timestamp': 1532595338135, 'errorCode': 100001, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_realname_register05: 身份证为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.10')" >
+        pass</a>
+
+    <div id='div_pt5.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.10: {'message': '身份证不能为空', 'timestamp': 1532595338173, 'errorCode': 100001, 'data': None}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>api_test.Test_api: 房东端登录验证接口验证</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_in: 发送验证码登录测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: QTAxd0hjbEdRQzQlQCVCMDI5OEZFRC0yRDY2LTQ5MEYtQjEwMy0zOTU4RTNDRThGQjclQCUyNTU0MzI1NSVAJTExNTIwJUAlYTI0ZWJlNzJkZWUzNjMyMWI3NzM2ODMyNDk1NzgzYjM=
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>28</td>
+    <td class="text text-success">28</td>
+    <td class="text text-danger">0</td>
+    <td class="text text-warning">0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+    <script type="text/javascript">
+var data = [
+	{
+		value: 0,
+		color: "#ebccd1",
+		label: "Error",
+		labelColor: 'white',
+		labelFontSize: '16'
+	},
+	{
+		value : 0,
+		color : "#faebcc",
+		label: "Fail",
+		labelColor: 'white',
+		labelFontSize: '16'
+	},
+	{
+		value : 28,
+		color : "#d6e9c6",
+		label : "Pass",
+		labelColor: 'white',
+		labelFontSize: '16'
+	}			
+]
+
+var newopts = {
+     animationSteps: 100,
+ 		animationEasing: 'easeInOutQuart',
+}
+
+//Get the context of the canvas element we want to select
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var myNewChart = new Chart(ctx).Pie(data,newopts);
+
+</script>
+	
+</body>
+</html>

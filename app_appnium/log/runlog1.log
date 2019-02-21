@@ -1,0 +1,130 @@
+2018-07-25 18:59:02,507 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 11:42:45,717 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 11:47:13,786 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 11:48:11,637 common_fun.py[line:12] INFO ===========check tiaoguo yuanshu===========
+2018-07-26 11:48:11,654 common_fun.py[line:17] INFO ===========element not found===========
+2018-07-26 11:48:11,654 common_fun.py[line:39] INFO ===========check tiaoguo yuanshu===========
+2018-07-26 11:48:11,660 common_fun.py[line:44] INFO ===========element not found===========
+2018-07-26 11:49:05,277 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 11:50:10,618 common_fun.py[line:12] INFO ===========check tiaoguo yuanshu===========
+2018-07-26 11:50:10,635 common_fun.py[line:17] INFO ===========element not found===========
+2018-07-26 11:50:10,635 common_fun.py[line:39] INFO ===========check tiaoguo yuanshu===========
+2018-07-26 11:50:10,643 common_fun.py[line:44] INFO ===========element not found===========
+2018-07-26 12:35:19,113 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 12:37:05,410 common_fun.py[line:12] INFO ===========check tiaoguo yuanshu===========
+2018-07-26 12:37:05,431 common_fun.py[line:18] INFO ===========element not found===========
+2018-07-26 12:37:05,432 common_fun.py[line:40] INFO ===========check tiaoguo yuanshu===========
+2018-07-26 12:37:05,446 common_fun.py[line:45] INFO ===========element not found===========
+2018-07-26 15:16:13,692 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:17:18,938 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:17:18,939 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:17:18,948 common_fun.py[line:18] INFO element not found
+2018-07-26 15:17:18,948 common_fun.py[line:54] INFO check mobile_id yuanshu
+2018-07-26 15:19:29,326 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:20:34,740 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:20:34,740 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:20:34,754 common_fun.py[line:18] INFO element not found
+2018-07-26 15:20:34,754 common_fun.py[line:54] INFO check mobile_id yuanshu
+2018-07-26 15:20:34,762 common_fun.py[line:59] INFO element not found
+2018-07-26 15:20:34,770 common_fun.py[line:71] INFO element not found
+2018-07-26 15:20:34,852 data_shuju.py[line:30] INFO shoujihao shi 18501787063 de yanzhengma wei 8135
+2018-07-26 15:20:34,868 common_fun.py[line:83] INFO element not found
+2018-07-26 15:20:34,868 common_fun.py[line:91] INFO Logining
+2018-07-26 15:20:34,876 common_fun.py[line:96] INFO element not found
+2018-07-26 15:20:34,877 loginView.py[line:20] INFO ---- login success ----
+2018-07-26 15:23:05,495 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:24:10,876 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:24:10,894 common_fun.py[line:18] INFO element not found
+2018-07-26 15:24:10,894 common_fun.py[line:40] INFO check tiaoguo yuanshu
+2018-07-26 15:24:10,903 common_fun.py[line:45] INFO element not found
+2018-07-26 15:25:02,201 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:26:07,417 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:26:07,429 common_fun.py[line:18] INFO element not found
+2018-07-26 15:26:07,429 common_fun.py[line:40] INFO check tiaoguo yuanshu
+2018-07-26 15:26:07,437 common_fun.py[line:45] INFO element not found
+2018-07-26 15:29:45,799 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:30:51,258 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:30:52,730 common_fun.py[line:21] INFO click tiaoguo success
+2018-07-26 15:30:52,730 common_fun.py[line:39] INFO check tiaoguo yuanshu
+2018-07-26 15:30:52,742 common_fun.py[line:44] INFO element not found
+2018-07-26 15:31:30,458 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:32:35,761 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:32:35,762 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:32:37,208 common_fun.py[line:21] INFO click tiaoguo success
+2018-07-26 15:32:37,208 common_fun.py[line:53] INFO check mobile_id yuanshu
+2018-07-26 15:32:43,762 common_fun.py[line:62] INFO tianxie18501787063success!
+2018-07-26 15:32:44,520 common_fun.py[line:74] INFO send yanzhengma success!
+2018-07-26 15:32:44,600 data_shuju.py[line:30] INFO shoujihao shi 18501787063 de yanzhengma wei 8135
+2018-07-26 15:32:50,494 common_fun.py[line:86] INFO shuru yanzhengma success!
+2018-07-26 15:32:50,495 common_fun.py[line:90] INFO Logining
+2018-07-26 15:32:51,529 common_fun.py[line:99] INFO shuru yanzhengma success!
+2018-07-26 15:32:51,529 loginView.py[line:20] INFO ---- login success ----
+2018-07-26 15:34:07,446 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:35:04,263 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:35:04,280 common_fun.py[line:17] INFO element not found
+2018-07-26 15:35:04,281 common_fun.py[line:39] INFO check tiaoguo yuanshu
+2018-07-26 15:35:54,004 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:36:59,035 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:36:59,052 common_fun.py[line:17] INFO element not found
+2018-07-26 15:36:59,053 common_fun.py[line:39] INFO check tiaoguo yuanshu
+2018-07-26 15:36:59,063 common_fun.py[line:44] INFO element not found
+2018-07-26 15:41:35,721 myunit.py[line:10] INFO ---- setup ----
+2018-07-26 15:41:35,724 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:42:40,835 test_login.py[line:11] INFO ----test_login----
+2018-07-26 15:42:40,835 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:42:40,836 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:42:42,283 common_fun.py[line:21] INFO click tiaoguo success
+2018-07-26 15:42:42,283 common_fun.py[line:53] INFO check mobile_id yuanshu
+2018-07-26 15:42:49,145 common_fun.py[line:62] INFO tianxie18621512473success!
+2018-07-26 15:42:49,852 common_fun.py[line:74] INFO send yanzhengma success!
+2018-07-26 15:42:49,932 data_shuju.py[line:30] INFO shoujihao shi 18621512473 de yanzhengma wei 4896
+2018-07-26 15:42:55,858 common_fun.py[line:86] INFO shuru yanzhengma success!
+2018-07-26 15:42:55,858 common_fun.py[line:90] INFO Logining
+2018-07-26 15:42:56,792 common_fun.py[line:99] INFO shuru yanzhengma success!
+2018-07-26 15:42:56,792 loginView.py[line:20] INFO ---- login success ----
+2018-07-26 15:42:56,792 myunit.py[line:14] INFO ---- tearDown ----
+2018-07-26 15:43:42,075 myunit.py[line:10] INFO ---- setup ----
+2018-07-26 15:43:42,078 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:43:55,923 test_login.py[line:11] INFO ----test_login----
+2018-07-26 15:43:55,923 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:43:55,923 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:43:57,221 common_fun.py[line:21] INFO click tiaoguo success
+2018-07-26 15:43:57,222 common_fun.py[line:53] INFO check mobile_id yuanshu
+2018-07-26 15:44:03,846 common_fun.py[line:62] INFO tianxie18621512473success!
+2018-07-26 15:44:04,557 common_fun.py[line:74] INFO send yanzhengma success!
+2018-07-26 15:44:04,644 data_shuju.py[line:30] INFO shoujihao shi 18621512473 de yanzhengma wei 4896
+2018-07-26 15:44:10,605 common_fun.py[line:86] INFO shuru yanzhengma success!
+2018-07-26 15:44:10,606 common_fun.py[line:90] INFO Logining
+2018-07-26 15:44:14,284 common_fun.py[line:99] INFO shuru yanzhengma success!
+2018-07-26 15:44:14,284 loginView.py[line:20] INFO ---- login success ----
+2018-07-26 15:44:14,285 myunit.py[line:14] INFO ---- tearDown ----
+2018-07-26 15:46:29,057 myunit.py[line:10] INFO ---- setup ----
+2018-07-26 15:46:29,060 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:47:35,052 test_login.py[line:11] INFO ----test_login----
+2018-07-26 15:47:35,053 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:47:35,053 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:47:36,538 common_fun.py[line:21] INFO click tiaoguo success
+2018-07-26 15:47:36,539 common_fun.py[line:53] INFO check mobile_id yuanshu
+2018-07-26 15:47:43,429 common_fun.py[line:62] INFO tianxie18621512473success!
+2018-07-26 15:47:44,156 common_fun.py[line:74] INFO send yanzhengma success!
+2018-07-26 15:47:44,248 data_shuju.py[line:30] INFO shoujihao shi 18621512473 de yanzhengma wei 2313
+2018-07-26 15:47:50,224 common_fun.py[line:86] INFO shuru yanzhengma success!
+2018-07-26 15:47:50,225 common_fun.py[line:90] INFO Logining
+2018-07-26 15:47:53,996 common_fun.py[line:99] INFO shuru yanzhengma success!
+2018-07-26 15:47:53,996 loginView.py[line:20] INFO ---- login success ----
+2018-07-26 15:47:53,997 myunit.py[line:14] INFO ---- tearDown ----
+2018-07-26 15:57:13,127 myunit.py[line:10] INFO ---- setup ----
+2018-07-26 15:57:13,130 appnium_desired.py[line:27] INFO app is starting
+2018-07-26 15:58:18,891 test_login.py[line:11] INFO ----test_login----
+2018-07-26 15:58:18,891 loginView.py[line:12] INFO ---- Login ----
+2018-07-26 15:58:18,891 common_fun.py[line:12] INFO check tiaoguo yuanshu
+2018-07-26 15:58:20,405 common_fun.py[line:21] INFO click tiaoguo success
+2018-07-26 15:58:20,406 common_fun.py[line:53] INFO check mobile_id yuanshu
+2018-07-26 15:58:27,252 common_fun.py[line:62] INFO tianxie18621512473success!
+2018-07-26 15:58:27,943 common_fun.py[line:74] INFO send yanzhengma success!
+2018-07-26 15:58:28,030 data_shuju.py[line:30] INFO shoujihao shi 18621512473 de yanzhengma wei 9687
+2018-07-26 15:58:34,029 common_fun.py[line:86] INFO shuru yanzhengma success!
+2018-07-26 15:58:34,029 common_fun.py[line:90] INFO Logining
+2018-07-26 15:58:37,793 common_fun.py[line:99] INFO shuru yanzhengma success!
+2018-07-26 15:58:37,793 loginView.py[line:20] INFO ---- login success ----
+2018-07-26 15:58:37,793 myunit.py[line:14] INFO ---- tearDown ----

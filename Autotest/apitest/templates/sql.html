@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/bootstrap/css/bootstrap.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>自动化测试平台</title>
+</head>
+<body role="document">
+<!--导航栏-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-user"></i> {{ user }}</a>
+                </li>
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--搜索栏-->
+<div class="page-header" style="padding-top: 70px;">
+    <form class="bs-example bs-example-form" role="form" method="get" action="/add_module_interface/">
+        {% csrf_token %}
+        <div class="input-group"></div>
+        <input type="search" name="single_interface_name" placeholder="名称" required>
+        <button type="submit" class="btn btn-default ">
+            <span class="glyphicon glyphicon-search"></span></button>
+    </form>
+</div>
+
+<a data-toggle="modal" data-target="#myModal">
+    <img src="/static/admin/img/icon-addlink.svg" alt="增加">新增sql
+</a>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel">
+                    Add sql
+                </h4>
+            </div>
+            <form action="/sql_manage/" method="post">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>sql_name</label>
+                        <input type="text" name="sql_name" class="form-control" placeholder="sql_name"
+                               required
+                               autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label>sql_content</label>
+                        <input type="text" name="sql_content" class="form-control" placeholder="sql_content " required
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>create_time</label>
+                        <input type="text" name="create_time" class="form-control" placeholder="2018-11-15"
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>update_time</label>
+                        <input type="text" name="update_time" class="form-control" placeholder="2018-11-15"
+                               autocomplete="off">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">close
+                        </button>
+                        <button type="submit" name="submit" class="btn btn-default">
+                            commit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!--单一接口测试-->
+<div class="form-row">
+<div class="col-md-ll">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>sql名</th>
+            <th>sql语句</th>
+            <th>create_time</th>
+            <th>update_time</th>
+            <th>编辑</th>
+            <th>删除</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for sql in sqls %}
+        <tr>
+            <td>{{ sql.id }}</td>
+            <td>{{ sql.sql_name }}</td>
+            <td>{{ sql.sql_content }}</td>
+            <td>{{ sql.create_time }}</td>
+            <td>{{ sql.update_time }}</td>
+            <td>
+                <a style="color: light blue" data-toggle="modal" data-target="#myModal"
+                   href="/single/{{ single_interface.id }}/change/">
+                    <img src="http://localhost:8080/static/admin/img/icon-changelink.svg"/></a>
+            </td>
+            <td>
+                <a style="color: light blue" class="related-widget-wrapper-link add-related"
+                   href="/single/{{ single_interface.id }}/delete/">
+                    <i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<!--翻页功能-->
+<div style="position: absolute; right: 50px;  ">
+    <tr>
+        <th>共</th>
+        <td>{{ sql_listcounts }}</td>
+        <th>条记录</th>
+    </tr>
+</div>
+<div class="container" style="position: absolute;  left: 0px;   ">
+    <ul class="pagination" id="pager">
+        {% if sqls.has_previous %}{# 如果有上一页，则正常显示上一页链接 #}
+        <li class="previous"><a
+                href="/sql_manage/?page={{ sqls.previous_page_number }}">上一页</a></li>
+        {# 上一页标签 #}
+        {% else %}
+        <li class="previous disabled"><a href="#">上一页</a></li>
+        {# 如果当前不存在上一页，则上一页链接不可点击#}
+        {% endif %}{# 上一页链接结束 #}
+        {% for num in single_interfaces.paginator.page_range %}
+        {% if num == currentPage %}
+        <li class="item active"><a href="/sql_manage/?page={{ num }}/">{{ num }}</a></li>
+        {# 显示当页数链接 #}
+        {% else %}
+        <li class="item"><a href="/sql_manage/?page={{ num }}">{{ num }}</a></li>
+        {% endif %}
+        {% endfor %}{# 下一页链接开始 #}
+        {% if single_interfaces.has_next %}{# 如果有下一页，则正常显示下一页 #}
+        <li class="next"><a href="/sql_manage/?page={{ sqls.next_page_number }}">下一页</a></li>
+        {% else %}
+        <li class="next disabled"><a href="#">下一页</a></li>
+        {% endif %}{# 下一页链接结束 #}
+    </ul>
+</div>
+</div>
+</body>
+</html>

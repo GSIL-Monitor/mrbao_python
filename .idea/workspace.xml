@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0caca647-5fda-4c8b-948b-1346a35ccc5a" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="mrbao_python" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="xiaoxiang_api_test.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/xiaoxiang_api_test.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="87" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nianhuojie.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/Nianhuojie.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/Login.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="81" lean-forward="false" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_yaml.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/read_yaml.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="70" column="8" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="huidiao.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lianxi/huidiao.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api_request.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/api_request.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="75" column="50" lean-forward="true" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Autotest/apitest/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="946">
+              <caret line="43" column="45" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>change_single_interface</find>
+      <find>create</find>
+      <find>BeautifulSoup</find>
+      <find>/drop/queryUserSubscriptionByBrand.json</find>
+      <find>我的订阅页面-订阅类目-查询用户订阅的品牌的降价商品top3</find>
+      <find>POST x-www-from-urlencoded</find>
+      <find>threeGoods</find>
+      <find>queryHistoricalPrice</find>
+      <find>goodSource</find>
+      <find>queryAllOneCategory</find>
+      <find>queryPageByOneId</find>
+      <find>queryGoods</find>
+      <find>single_interface_case</find>
+      <find>TYPE_CHECKING</find>
+      <find>add_module</find>
+      <find>Single_interfaceSerializers</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/dapaijiangjia_bussiness/手机数码.html" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/dapaijiangjia_bussiness/data_html.py" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/urls.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/dapaijiangjia_bussiness/dapai_bussiness.py" />
+        <option value="$PROJECT_DIR$/Autotest/Autotest/settings.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module/xiaoxiang_dapiajiangjia.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_run_case/run_test.py" />
+        <option value="$PROJECT_DIR$/test_sample.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/pluggy/manager.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_peizhi/logging.conf" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/test_nianhuojie.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/xiaoxiang_dapaijiangjia_test.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_peizhi/xiaoxiang_token.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module/xiaoxiang_nianhuojie.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/asyncio/coroutines.py" />
+        <option value="$PROJECT_DIR$/爬虫/test.py" />
+        <option value="$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/yarl/quoting.py" />
+        <option value="$PROJECT_DIR$/爬虫/cesi.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_report/xiaoxiang.log" />
+        <option value="$PROJECT_DIR$/asyncio_api_test/Test_Case/xiaoxiang_api_case.yaml" />
+        <option value="$PROJECT_DIR$/asyncio_api_test/read_yaml.py" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/templates/login.html" />
+        <option value="$PROJECT_DIR$/ceshi.html" />
+        <option value="$PROJECT_DIR$/lianxi/lianxi.css" />
+        <option value="$PROJECT_DIR$/lianxi/ceshi.html" />
+        <option value="$PROJECT_DIR$/lianxi/123.html" />
+        <option value="$PROJECT_DIR$/lianxi/css盒子.html" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/templates/left.html" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/views.py" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/templates/product_manage.html" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/templates/home.html" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/templates/welcome.html" />
+        <option value="$PROJECT_DIR$/Autotest/apitest/view_api.py" />
+        <option value="$PROJECT_DIR$/lianxi/ceshi.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module/xiaoxiang_login.py" />
+        <option value="$PROJECT_DIR$/ceshi.py" />
+        <option value="$USER_HOME$/Desktop/robotframework-ride-1.7.3.1/setup.py" />
+        <option value="$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_operation_flow/Fangyuan_Contract_Mensuo_Quanxian.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/xiaoxiang_api_case.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/get_data.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/xiaoxiang_api_prod.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/api_header.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/xiaoxiang_api.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/xiaoxiang_api_test.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/Login.yaml" />
+        <option value="$PROJECT_DIR$/Pytest/test_sample.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/Nianhuojie.yaml" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/api_request.py" />
+        <option value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/read_yaml.py" />
+        <option value="$PROJECT_DIR$/lianxi/huidiao.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.5.0 (F:\Python35\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Xiaoxiangyoupin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Xiaoxiangyoupin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaoxiang_test_case" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Xiaoxiangyoupin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaoxiang_peizhi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Xiaoxiangyoupin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaoxiang_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Xiaoxiangyoupin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaoxiang_common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Xiaoxiangyoupin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaoxiang_api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mrbao_python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pytest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\mrbao_python" />
+      <recent name="F:\mrbao_python\asyncio_api_test\Test_Case" />
+      <recent name="C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\Lib\site-packages" />
+      <recent name="F:\mrbao_python\Xiaoxiangyoupin\xiaoxiang_peizhi" />
+      <recent name="F:\mrbao_python\Xiaoxiangyoupin\xiaoxiang_run_case" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\mrbao_python\lianxi" />
+      <recent name="F:\mrbao_python" />
+      <recent name="F:\mrbao_python\Pytest" />
+      <recent name="F:\mrbao_python\Xiaoxiangyoupin\xiaoxiang_report" />
+      <recent name="F:\mrbao_python\Xiaoxiangyoupin\xiaoxiang_test_case" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.huidiao">
+    <configuration default="false" name="ceshi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ceshi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ride (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="F:/Python35/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="F:/Python35/Scripts/ride.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="read_yaml" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/read_yaml.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="xiaoxiang_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module/xiaoxiang_login.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_sample" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pytest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pytest/test_sample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="huidiao" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="F:/Python35" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mrbao_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lianxi/huidiao.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.huidiao" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ceshi" />
+      <item index="2" class="java.lang.String" itemvalue="Python.ride (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.read_yaml" />
+      <item index="4" class="java.lang.String" itemvalue="Python.xiaoxiang_login" />
+      <item index="5" class="java.lang.String" itemvalue="Python.test_sample" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.read_yaml" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_sample" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ride (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.xiaoxiang_login" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ceshi" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0caca647-5fda-4c8b-948b-1346a35ccc5a" name="Default" comment="" />
+      <created>1545790203047</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545790203047</updated>
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1550712487197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550712487197</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.21255673" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17973857" sideWeight="0.52420574" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3980424" sideWeight="0.6838124" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48613375" sideWeight="0.47579426" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/suite.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/suite.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/suite.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_baseView/request_bane.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="18" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lianxi/1.yaml" />
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_peizhi/xiaoxiang_token.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/billiard/einfo.py" />
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/dapaijiangjia_bussiness/data_html.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/dapaijiangjia_bussiness/dapai_bussiness.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_run_case/run_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Autotest/apitest/templates/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/爬虫/cesi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/爬虫/test.py" />
+    <entry file="file://$PROJECT_DIR$/lianxi/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/爬虫/Test-04/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/yilou_fangdong_Small_program.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/yilou_fangdong_shiMing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-858">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/yilou_fangdong_menSuo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/yilou_fangdong_contract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/fuangYuanXinXi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1914">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/fangdongduan_H5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/asyncio/futures.py" />
+    <entry file="file://$USER_HOME$/Desktop/EasyTest-master/base/views.py" />
+    <entry file="file://$USER_HOME$/Desktop/robotframework-ride-1.7.3.1/src/bin/ride.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/robotframework-ride-1.7.3.1/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="49" column="51" lean-forward="true" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Scripts/ride.py" />
+    <entry file="file://$PROJECT_DIR$/Autotest/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python35/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Autotest/Autotest/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_operation_flow/Business_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1254">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_operation_flow/Fangyuan_Contract_Mensuo_Quanxian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module/xiaoxiang_nianhuojie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#73#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/get_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/celery_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/jiexi_request_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/redis_jiexi.py" />
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/xiaoxiang_api_prod.yaml" />
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_module/xiaoxiang_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/api_header.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python35/Scripts/ride.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/xiaoxiang_dapaijiangjia_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3493">
+          <caret line="3" column="73" lean-forward="true" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/xiaoxiangyoupin_login_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pytest/test_sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="63" column="39" lean-forward="true" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pytest/report/html/index.html" />
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_api/xiaoxiang_api_test.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="87" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/Nianhuojie.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_test_case/Login.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="81" lean-forward="false" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/api_request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="75" column="50" lean-forward="true" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Xiaoxiangyoupin/xiaoxiang_common/read_yaml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="70" column="8" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business_parameters/contract_parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business_parameters/fuangyuan_parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1188">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business_parameters/H5_parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aYiLou_fangdong/yilou_fangdong_business/fangdong_getmyinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="78" column="4" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lianxi/huidiao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

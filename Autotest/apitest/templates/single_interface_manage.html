@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/bootstrap/css/bootstrap.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>自动化测试平台</title>
+</head>
+<body role="document">
+<!--导航栏-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/apitest_manage/">&nbsp;&nbsp;流程接口测试</a></li>
+                <li><a href="/apistep_manage/">&nbsp;&nbsp;流程接口测试步骤</a></li>
+                <li class="active"><a href="/single_interface_manage/">&nbsp;&nbsp;单一接口测试</a></li>
+                <li><a href="/bug_manage/">&nbsp;&nbsp;BUG列表</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-user"></i> {{ user }}</a>
+                </li>
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--搜索栏-->
+<div class="page-header" style="padding-top: 70px;">
+    <form class="bs-example bs-example-form" role="form" method="get" action="/add_module_interface/">
+        {% csrf_token %}
+        <div class="input-group"></div>
+        <input type="search" name="single_interface_name" placeholder="名称" required>
+        <button type="submit" class="btn btn-default ">
+            <span class="glyphicon glyphicon-search"></span></button>
+    </form>
+</div>
+
+<a data-toggle="modal" data-target="#myModal">
+    <img src="/static/admin/img/icon-addlink.svg" alt="增加">新增接口用例
+</a>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel">
+                    Add Single_Interface_Case
+                </h4>
+            </div>
+            <form action="/add_single_interface/" method="post">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>single_interface_name</label>
+                        <input type="text" name="single_interface_name" class="form-control" placeholder="接口用例标题"
+                               required
+                               autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label>single_interface_url</label>
+                        <input type="text" name="single_interface_url" class="form-control" placeholder="接口地址 " required
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>single_interface_method</label>
+                        <select class="form-control" name="single_interface_method">
+                            <option value="0" selected>get</option>
+                            <option value="1">post</option>
+                            <option value="2">put</option>
+                            <option value="3">delete</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>single_interface_paragram</label>
+                        <input type="text" name="single_interface_paragram" class="form-control" placeholder="接口请求参数"
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>single_interface_desc</label>
+                        <input type="text" name="single_interface_desc" class="form-control" placeholder="用例说明"
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>create_time</label>
+                        <input type="text" name="create_time" class="form-control" placeholder="2018-11-12"
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>module_interface</label>
+                        <select class="form-control" name="module_interface_list">
+                            {% for module_interface in module_interfaces %}
+                            <option value="{{ module_interface.id }}">{{ module_interface.api_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">close
+                        </button>
+                        <button type="submit" name="submit" class="btn btn-default">
+                            commit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!--单一接口测试-->
+<div class="form-row">
+<div class="col-md-ll">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>接口用例标题</th>
+            <th>接口地址</th>
+            <th>接口请求参数</th>
+            <th>用例说明</th>
+            <th>请求方法</th>
+            <th>创建时间</th>
+            <th>模块接口名</th>
+            <th>编辑</th>
+            <th>删除</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for single_interface in single_interfaces %}
+        <tr>
+            <td>{{ single_interface.id }}</td>
+            <td>{{ single_interface.single_interface_name }}</td>
+            <td>{{ single_interface.single_interface_url }}</td>
+            <td>{{ single_interface.single_interface_paragram }}</td>
+            <td>{{ single_interface.single_interface_desc }}</td>
+            <td>{{ single_interface.single_interface_method }}</td>
+            <td>{% if single_interface.single_interface_status == 1 %}
+                <a style="color:green">{{ single_interface.single_interface_status }}</a>
+                {% else %}
+                <a style="color:red">{{ single_interface.single_interface_status }}</a>
+                {% endif %}
+            </td>
+            <td>{{ single_interface.create_time }}</td>
+            <td>
+                {% for moudle_interface in module_interfaces %}
+                {% if module_interface.id == single_interface.single_interface_id %}
+                <a>{{ module_interface.api_name }}</a>
+                {% endif %}
+                {% endfor %}
+            </td>
+            <td>
+                <a style="color: light blue" data-toggle="modal" data-target="#myModal"
+                   href="/single/{{ single_interface.id }}/change/">
+                    <img src="http://localhost:8080/static/admin/img/icon-changelink.svg"/></a>
+            </td>
+            <td>
+                <a style="color: light blue" class="related-widget-wrapper-link add-related"
+                   href="/single/{{ single_interface.id }}/delete/">
+                    <i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+
+<!--翻页功能-->
+<div style="position: absolute; right: 50px;  ">
+    <tr>
+        <th>共</th>
+        <td>{{ single_interface_managecounts }}</td>
+        <th>条记录</th>
+    </tr>
+</div>
+<div class="container" style="position: absolute;  left: 0px;   ">
+    <ul class="pagination" id="pager">
+        {% if single_interfaces.has_previous %}{# 如果有上一页，则正常显示上一页链接 #}
+        <li class="previous"><a
+                href="/single_interface_manage/?page={{ single_interfaces.previous_page_number }}">上一页</a></li>
+        {# 上一页标签 #}
+        {% else %}
+        <li class="previous disabled"><a href="#">上一页</a></li>
+        {# 如果当前不存在上一页，则上一页链接不可点击#}
+        {% endif %}{# 上一页链接结束 #}
+        {% for num in single_interfaces.paginator.page_range %}
+        {% if num == currentPage %}
+        <li class="item active"><a href="/single_interface_manage/?page={{ num }}/">{{ num }}</a></li>
+        {# 显示当页数链接 #}
+        {% else %}
+        <li class="item"><a href="/single_interface_manage/?page={{ num }}">{{ num }}</a></li>
+        {% endif %}
+        {% endfor %}{# 下一页链接开始 #}
+        {% if single_interfaces.has_next %}{# 如果有下一页，则正常显示下一页 #}
+        <li class="next"><a href="/single_interface_manage/?page={{ single_interfaces.next_page_number }}">下一页</a></li>
+        {% else %}
+        <li class="next disabled"><a href="#">下一页</a></li>
+        {% endif %}{# 下一页链接结束 #}
+    </ul>
+</div>
+</body>
+</html>

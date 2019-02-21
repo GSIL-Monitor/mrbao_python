@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/bootstrap/css/bootstrap.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Change  product</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav navbar-right">
+             <li><a href="../product_manage" target="mainFrame"> <i
+                    class="glyphicon glyphicon-user"></i> {{ user }}</a>
+            </li>
+            <li><a href="../product_manage" target="mainFrame"> <i
+                    class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+             </ul>
+        </div>
+    </div>
+</nav>
+<div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+          <h2 class="page-header">Change Product</h2>
+          <form action="/product/{{ product_list.id }}/change/" method="post" >
+            <div class="form-group">
+              <label >项目名</label>
+              <input type="text" name="product_name" class="form-control" value="{{ product_list.product_name }}" required autocomplete="off">
+               </div>
+              <div class="form-group">
+              <label >项目负责人</label>
+              <input type="text"  name="producter" class="form-control" value="{{ product_list.producter }}" required autocomplete="off">
+              </div>
+              <div class="form-group">
+              <label >项目版本</label>
+              <select  class="form-control" name="prpducter_version">
+                <option value="{{ product_list.prpducter_version }}" selected>{{ product_list.prpducter_version }}</option>
+                <option value="1">v1.0</option>
+                <option value="2">v2.0</option>
+                <option value="3">v3.0</option>
+               </select>
+               </div>
+            <div class="form-group">
+              <label >项目测试人员</label>
+              <input type="text"  name="producter_tester" class="form-control" value="{{ product_list.producter_tester }}" autocomplete="off">
+               </div>
+              <div class="form-group">
+              <label >项目状态</label>
+              <select  class="form-control" name="producter_state">
+                <option value="{{ product_list.producter_state }}" selected>{{ product_list.producter_state }}</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+               </select>
+               </div>
+               <div class="form-group">
+              <label >创建时间</label>
+              <input type="text"  name="create_time" class="form-control" value="{{ product_list.create_time }}"  required autocomplete="off">
+              </div>
+            <div class="form-group">
+              <label >项目描述</label>
+              <textarea class="form-control" name="product_desc" rows="4" value="{{ product_list.product_desc }}" autocomplete="off"></textarea>
+               </div>
+            <button class="btn btn-default" type="submit" name="submit">修改项目</button>
+          </form>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

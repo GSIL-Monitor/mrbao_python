@@ -1,0 +1,36 @@
+Login:
+    case01:
+        case_name: test_success_login
+        api_method: post
+        login_url: http://dev.xiaoxiangyoupin.com:1111/v2/user/gustLogin.json
+        data:
+            mobile: 18501787063
+            verifcode: 888888
+        result:
+            actual_result: 200
+            expected_result: 200
+        case_desc: 正常登录
+
+    case02:
+        case_name: test_login
+        api_method: post
+        login_url: http://dev.xiaoxiangyoupin.com:1111/v2/user/gustLogin.json
+        data:
+            mobile: 18501787063
+            verifcode: 888888
+        result:
+            actual_result: 200
+            expected_result: 200
+        case_desc: 异常登录
+
+Dapaijiangjia:
+    dapaijiangjia:
+        case_name: test_dapaijiangjia
+        api_method: post
+        login_url: http://dev.xiaoxiangyoupin.com:1111/v2/brand/drop/topThree.json
+        data:
+            {}
+        result:
+            actual_result: 200
+            expected_result: 200
+        case_desc: 正常登录

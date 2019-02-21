@@ -1,0 +1,228 @@
+header:
+  anzhuo: J04PXNKU19T1ONX07VRWUSGW38DLNN
+  pingguo: KX3RFJ6YB6FNR1DQAHGLYPWSEW0OQF
+  #zukeanzhuo: J04PXNKU19T1ONX07VRWUSGW38DLNN
+  pingguo1: yi lou fang dong/1.3 (iPhone; iOS 10.3.2; Scale/2.00)
+  accept: application/json
+  content_type: application/json
+  app_key: iwjw.superjia.com
+  pingguo_os:  iPhone OS
+  pingguo_os_beta: ios
+  imei_beta: B0298FED-2D66-490F-B103-3958E3CE8FB7
+  imei: 5F724E80-3C49-4EA8-8BBA-D23AF1A9886A
+  accept_encoding: gzip
+  data_type: json
+  ver: '2.6'
+  u_token:
+
+Login_beta:
+  mensuo: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/permissionDoorList.rest
+  #发送验证码
+  send_verifcode: http://118.178.242.96:8103/system/send_verifycode.rest
+  #登录输入验证码
+  login_in: http://118.178.242.96:8103/system/login.rest
+
+Login_test:
+  mensuo: http://ffrenterapp.iwjwtest.com/FffdAppServer/door/permissionDoorList.rest
+  #发送验证码
+  send_verifcode: http://ffrenterapp.iwjwtest.com/system/send_verifycode.rest
+  #登录输入验证码
+  login_in: http://ffrenterapp.iwjwtest.com/system/login.rest
+
+mensuo_test:
+  #增加安全码doorId=20996 pwd=112233
+  addSafeCode: http://ffrenterapp.iwjwtest.com/door/addSafeCode.rest
+
+  #校验安全码的唯一性(v1.7新增)   "doorId": 123, "pwd": "111111"
+  checkPwdDuplicate: http://ffrenterapp.iwjwtest.com/door/checkPwdDuplicate.rest
+
+  #激活安全码(v1.7新增) "doorId": 123
+  activateSafeCode: http://ffrenterapp.iwjwtest.com/door/activateSafeCode.rest
+
+  #引导设置小门密码、设置大门安全码、激活大门安全码(v1.7新增)  "doorId": 123
+  addPwdAddOrActivateSafeCode: http://ffrenterapp.iwjwtest.com/door/addPwdAddOrActivateSafeCode.rest
+
+  #轮询获取门锁安全码状态（v2.0新增）
+  safeCodeStatusResult: http://ffrenterapp.iwjwtest.com/door/safeCodeStatusResult.rest
+
+  #房间增加长期密码doorId=20997 pwd=112233  type=2
+  updatePassword: http://ffrenterapp.iwjwtest.com/lock/updatePassword.rest
+
+  #获取门锁基本信息 门锁ID doorId   授权人id authUserId
+  getLockBaseInfo: http://ffrenterapp.iwjwtest.com/lock/getLockBaseInfo.rest
+
+  #获取门锁开门记录  门锁ID doorId  授权人id authUserId   startTime   endTime
+  getOpenRecord:  http://ffrenterapp.iwjwtest.com/lock/getOpenRecord.rest
+
+  #修改门锁密码  门锁ID doorId  授权人id  userId     pwd=‘’  source=2租客
+  updatePassword: http://ffrenterapp.iwjwtest.com/lock/updatePassword.rest
+
+  #创建门锁密码(智能门锁)
+  setPassword: http://ffrenterapp.iwjwtest.com/lock/setPassword.rest
+
+  #删除门锁密码(智能门锁)  doorId    授权id authId    授权人id authUserId     doorType门锁类型：1、大门；2、内门
+  deletePassword: http://ffrenterapp.iwjwtest.com/lock/deletePassword.rest
+
+  #获取新密码(智能门锁)doorId   授权人id authUserId
+  getNewLockPWD: http://ffrenterapp.iwjwtest.com/lock/getNewLockPWD.rest
+
+  #获取房源门锁列表(智能门锁) houseId
+  getLocksByHouseId: http://ffrenterapp.iwjwtest.com/lock/getLocksByHouseId.rest
+
+  #发送短信(智能门锁) 授权id authId    moobile
+  sendPWDMessage: http://ffrenterapp.iwjwtest.com/lock/sendPWDMessage.rest
+
+  #查询开门通知配置(智能门锁)  doorId
+  getOpenNotificationConfig: http://ffrenterapp.iwjwtest.com/lock/getOpenNotificationConfig.rest
+
+  #修改开门通知设置(智能门锁) doorId   授权人ID  userId   status  0：打开 1：关闭
+  setOpenNotificationConfig: http://ffrenterapp.iwjwtest.com/lock/setOpenNotificationConfig.rest
+
+  #申请紧急临时密码(v1.1新增)doorId
+  applyUrgentTempPWD: http://ffrenterapp.iwjwtest.com/door/applyUrgentTempPWD.rest
+
+  #创建门锁临时密码(v2.6修改)doorId（蓝牙开门时获取紧急密码）
+  addDoorPWD4Temp: http://ffrenterapp.iwjwtest.com/door/addDoorPWD4Temp.rest
+
+mensuo_beta:
+  #增加安全码doorId=20996 pwd=112233
+  addSafeCode: http://118.178.242.96:8103/door/addSafeCode.rest
+
+  #校验安全码的唯一性(v1.7新增)   "doorId": 123, "pwd": "111111"
+  checkPwdDuplicate: http://118.178.242.96:8103/door/checkPwdDuplicate.rest
+
+  #激活安全码(v1.7新增) "doorId": 123
+  activateSafeCode: http://118.178.242.96:8103/door/activateSafeCode.rest
+
+  #引导设置小门密码、设置大门安全码、激活大门安全码(v1.7新增)  "doorId": 123
+  addPwdAddOrActivateSafeCode: http://118.178.242.96:8103/door/addPwdAddOrActivateSafeCode.rest
+
+  #轮询获取门锁安全码状态（v2.0新增）
+  safeCodeStatusResult: http://118.178.242.96:8103/door/safeCodeStatusResult.rest
+
+  #doorId房间增加长期密码=20997 pwd=112233  type=2
+  updatePassword: http://118.178.242.96:8103/lock/updatePassword.rest
+
+  #获取门锁基本信息 门锁ID doorId   授权人id authUserId
+  getLockBaseInfo: http://118.178.242.96:8103/lock/getLockBaseInfo.rest
+
+  #获取门锁开门记录  门锁ID doorId  授权人id authUserId   startTime   endTime
+  getOpenRecord:  http://118.178.242.96:8103/lock/getOpenRecord.rest
+
+  #修改门锁密码  门锁ID doorId  授权人id  userId     pwd=‘’  source=2租客
+  updatePassword: http://118.178.242.96:8103/lock/updatePassword.rest
+
+  #创建门锁密码(智能门锁)
+  setPassword: http://118.178.242.96:8103/lock/setPassword.rest
+
+  #删除门锁密码(智能门锁)  doorId    授权idauthId    授权人id authUserId     doorType门锁类型：1、大门；2、内门
+  deletePassword: http://118.178.242.96:8103/lock/deletePassword.rest
+
+  #获取新密码(智能门锁)doorId   授权人id authUserId
+  getNewLockPWD: http://118.178.242.96:8103/lock/getNewLockPWD.rest
+
+  #获取房源门锁列表(智能门锁) houseId
+  getLocksByHouseId: http://118.178.242.96:8103/lock/getLocksByHouseId.rest
+
+  #发送短信(智能门锁) 授权id authId    moobile
+  sendPWDMessage: http://118.178.242.96:8103/lock/sendPWDMessage.rest
+
+  #查询开门通知配置(智能门锁)  doorId
+  getOpenNotificationConfig: http://118.178.242.96:8103/lock/getOpenNotificationConfig.rest
+
+  #修改开门通知设置(智能门锁) doorId   授权人ID  userId   status  0：打开 1：关闭
+  setOpenNotificationConfig: http://118.178.242.96:8103/lock/setOpenNotificationConfig.rest
+
+  #申请紧急临时密码(v1.1新增)doorId
+  applyUrgentTempPWD: http://118.178.242.96:8103/door/applyUrgentTempPWD.rest
+
+  #创建门锁临时密码(v2.6修改)doorId
+  addDoorPWD4Temp: http://118.178.242.96:8103/door/addDoorPWD4Temp.rest
+
+#租约
+contract_beta:
+  #点击确认后调的接口
+
+  #获取合同信息
+  #contractId=3595
+  econtract_info: http://ffrenterapp.iwjwbeta.com/contract/econtract_info.rest
+
+  #获取账单信息contractId=3595 pageNo=1 pageSize=100
+  getRentBillList: http://ffrenterapp.iwjwbeta.com/bill/getRentBillList.rest
+
+  #确认合同
+  renter_confirm_contract: http://ffrenterapp.iwjwbeta.com/contract/renter_confirm_contract.rest
+
+  #代缴账单
+  getRenterNeedPayBillList: http://ffrenterapp.iwjwbeta.com/bill/getRenterNeedPayBillList.rest
+
+   #获取同住租客列表  contractId
+  list_share_renter:  http://ffrenterapp.iwjwbeta.com/contract/list_share_renter.rest
+
+  #删除同住租客  "contractId":"合同id", "shareRenterId":"同住租客id"
+  delete_share_renter: http://ffrenterapp.iwjwbeta.com/contract/delete_share_renter.rest
+
+  #直接扫码开门(v2.6修改)qrCode
+  directOpenDoorByQRCode: http://ffrenterapp.iwjwbeta.com/door/directOpenDoorByQRCode.rest
+
+  #获取同住租客详情   "shareRenterId":"同住租客id"
+  get_share_renter_detail: http://ffrenterapp.iwjwbeta.com/contract/get_share_renter_detail.rest
+
+#租约
+contract_test:
+
+  #获取合同信息
+  #contractId=3595
+  econtract_info: http://ffrenterapp.iwjwtest.com/contract/econtract_info.rest
+
+  #获取账单信息contractId=3595 pageNo=1 pageSize=100
+  getRentBillList: http://ffrenterapp.iwjwtest.com/bill/getRentBillList.rest
+
+  #确认合同
+  renter_confirm_contract: http://ffrenterapp.iwjwtest.com/contract/renter_confirm_contract.rest
+
+  #代缴账单
+  getRenterNeedPayBillList: http://ffrenterapp.iwjwtest.com/bill/getRenterNeedPayBillList.rest
+
+  #获取同住租客列表  contractId
+  list_share_renter: http://ffrenterapp.iwjwtest.com/contract/list_share_renter.rest
+
+  #删除同住租客  "contractId":"合同id", "shareRenterId":"同住租客id"
+  delete_share_renter: http://ffrenterapp.iwjwtest.com/contract/delete_share_renter.rest
+
+  #直接扫码开门(v2.6修改)qrCode
+  directOpenDoorByQRCode: http://ffrenterapp.iwjwtest.com/door/directOpenDoorByQRCode.rest
+
+  #获取同住租客详情   "shareRenterId":"同住租客id"
+  get_share_renter_detail: http://ffrenterapp.iwjwtest.com/contract/get_share_renter_detail.rest
+
+
+#登录后的接口获取
+login_interface_test:
+  #门锁权限资料
+  permissionDoorList: http://ffrenterapp.iwjwtest.com/door/permissionDoorList.rest
+
+  list_renter_base_info_index: http://ffrenterapp.iwjwtest.com/bill/list_renter_base_info_index.rest
+
+  addPwdAddOrActivateSafeCode: http://ffrenterapp.iwjwtest.com/door/addPwdAddOrActivateSafeCode.rest
+
+  #获取租客信息
+  getAccountInfo: http://ffrenterapp.iwjwtest.com/account/getAccountInfo.rest
+
+  #租客基础信息renterId=''
+  renter_base_info: http://ffrenterapp.iwjwtest.com/bill/renter_base_info.rest
+
+login_interface_beta:
+  #门锁权限资料
+  permissionDoorList: http://ffrenterapp.iwjwbeta.com/door/permissionDoorList.rest
+
+  list_renter_base_info_index: http://ffrenterapp.iwjwbeta.com/bill/list_renter_base_info_index.rest
+
+  addPwdAddOrActivateSafeCode: http://ffrenterapp.iwjwbeta.com/door/addPwdAddOrActivateSafeCode.rest
+
+  #获取租客信息
+  getAccountInfo: http://ffrenterapp.iwjwbeta.com/account/getAccountInfo.rest
+
+  #租客基础信息renterId=''
+  renter_base_info: http://ffrenterapp.iwjwbeta.com/bill/renter_base_info.rest
+

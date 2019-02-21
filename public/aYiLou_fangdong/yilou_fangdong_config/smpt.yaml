@@ -1,0 +1,12 @@
+QQ:
+  pop3: pop.qq.com
+  pop3_port: 110
+  QQ_password: 'Dabaoaiying1314!'
+
+  smpt: smtp.qq.com
+  smpt_port: 25
+
+Formail:
+  send_sever: smtp.exmail.qq.com
+  Formail_port: 25
+  Formain_password: 'Baotao19901224'

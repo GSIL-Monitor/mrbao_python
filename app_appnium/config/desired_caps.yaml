@@ -1,0 +1,12 @@
+platforName: Android
+platforVersion: 7.0
+deviceName: Glalaxy S8+
+app: r'C:\Users\adin\Desktop\YilouFangdongApp-release.apk'
+noRest: False
+appPackage: com.yilou.fangdong
+appActivity: com.yilou.fangdong.ui.activity.WelcomeActivity
+udid: 988b1c444c464a5530
+ip: 127.0.0.1
+port: 4723
+unicodeKeyboard: True
+resetKeyboard: True

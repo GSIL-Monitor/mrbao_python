@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8080/static/bootstrap/css/bootstrap.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>产品自动化测试平台</title>
+</head>
+<body role="document">
+<!--导航栏-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/product_manage/">&nbsp;&nbsp;产品列表</a></li>
+                <li><a href="/module_page/">&nbsp;&nbsp;模块列表</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-user"></i> {{ user }}</a>
+                </li>
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--搜索栏-->
+<div class="form-row">
+    <div class="page-header" style="padding-top: 70px;">
+        <form class="bs-example bs-example-form" role="form" method="get" action="/product_search/">
+            {% csrf_token %}
+            <div class="input-group"></div>
+            <input type="search" name=" product_name" placeholder="名称" required>
+            <button type="submit" class="btn btn-default ">
+                <span class="glyphicon glyphicon-search"></span></button>
+        </form>
+    </div>
+</div>
+
+<a  data-toggle="modal" id='identifier' data-target="#myModal">
+    <img src="/static/admin/img/icon-addlink.svg" alt="增加">添加产品
+</a>
+<script>
+    $(function()
+        {$('#identifier').modal(options)
+       })
+</script>
+<!-- 添加产品模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    添加产品
+                </h4>
+            </div>
+            <form action="/add_product/" method="post">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>项目名</label>
+                        <input type="text" name="product_name" class="form-control" placeholder="项目名" required
+                               autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label>项目负责人</label>
+                        <input type="text" name="producter" class="form-control" placeholder="项目负责人 " required
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>项目测试人员</label>
+                        <input type="text" name="producter_tester" class="form-control" placeholder="项目测试人员"
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>项目状态</label>
+                        <select class="form-control" name="producter_state">
+                            <option value="0" selected>项目状态</option>
+                            <option value="1">0</option>
+                            <option value="2">1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>创建时间</label>
+                        <input type="text" name="create_time" class="form-control" placeholder="2018-11-03" required
+                               autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>项目描述</label>
+                        <textarea class="form-control" name="product_desc" rows="4" autocomplete="off"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="submit" name="submit" class="btn btn-default">
+                        提交
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!--产品列表-->
+<div class="form-row">
+    <div class="col-md-ll">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>项目名称</th>
+                <th>项目描述</th>
+                <th>项目测试人员</th>
+                <th>项目版本</th>
+                <th>项目负责人</th>
+                <th>创建时间</th>
+                <th>项目状态</th>
+                <th>编辑</th>
+                <th>删除</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>
+                    <a href="/module_page/">{{ product.product_name }}</a>
+                </td>
+                <td>{{ product.product_desc }}</td>
+                <td>{{ product.producter_tester }}</td>
+                <td>{{ product.prpducter_version }}</td>
+                <td>{{ product.producter }}</td>
+                <td>{{ product.create_time }}</td>
+                <td>{% if product.producter_state == 1 %}
+                    <a style="color:green">{{ product.producter_state }}</a>
+                    {% else %}
+                    <a style="color:red">{{ product.producter_state }}</a>
+                    {% endif %}
+                </td>
+                <td><a data-toggle="modal"  data-target="#myModal"
+                       href="/product/{{ product.id }}/change/">
+                    <img src="http://127.0.0.1:8080/static/admin/img/icon-changelink.svg"/></a>
+                </td>
+                <td><a style="color: light blue" class="related-widget-wrapper-link add-related"
+                       href="/product/{{ product.id }}/delete/">
+                    <i class="glyphicon glyphicon-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--翻页功能-->
+<div style="position: absolute; right: 0px;  ">
+    <tr>
+        <th>共</th>
+        <td>{{ productcounts }}</td>
+        <th>条记录</th>
+    </tr>
+</div>
+<div class="container" style="position: absolute;  left: 0px;   ">
+    <ul class="pagination" id="pager">
+        {% if products.has_previous %}{# 如果有上一页，则正常显示上一页链接 #}
+        <li class="previous"><a href="/product_manage/?page={{ products.previous_page_number }}">上一页</a></li>
+        {# 上一页标签 #}
+        {% else %}
+        <li class="previous disabled"><a href="#">上一页</a></li>
+        {# 如果当前不存在上一页，则上一页链接不可点击#}
+        {% endif %}{# 上一页链接结束 #}
+        {% for num in products.paginator.page_range %}
+        {% if num == currentPage %}
+        <li class="item active"><a href="/product_manage/?page={{ num }}/">{{ num }}</a></li>
+        {# 显示当页数链接 #}
+        {% else %}
+        <li class="item"><a href="/product_manage/?page={{ num }}">{{ num }}</a></li>
+        {% endif %}
+        {% endfor %}{# 下一页链接开始 #}
+        {% if products.has_next %}{# 如果有下一页，则正常显示下一页 #}
+        <li class="next"><a href="/product_manage/?page={{ products.next_page_number }}">下一页</a></li>
+        {% else %}
+        <li class="next disabled"><a href="#">下一页</a></li>
+        {% endif %}{# 下一页链接结束 #}
+    </ul>
+</div>
+</body>
+</html>

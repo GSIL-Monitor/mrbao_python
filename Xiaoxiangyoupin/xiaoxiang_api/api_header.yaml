@@ -1,0 +1,6 @@
+header_test:
+    Accept-Encoding: gzip
+    User-Agent: os/Android model/COL-AL10 brand/HONOR sdk/27
+header_prod:
+    Accept-Encoding: gzip
+    User-Agent: os/Android model/COL-AL10 brand/HONOR sdk/27

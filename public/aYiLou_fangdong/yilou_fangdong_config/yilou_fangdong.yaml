@@ -1,0 +1,357 @@
+mysqlconf:
+  host: 121.40.127.92
+  port: 3309
+  user: qa_tmp
+  password: mjl84_)l23jda0l_23
+  db_name: sms_fyb_beta
+  db_name1: fdb_beta
+  charset: utf8
+
+test_mysql:
+  host: 20.0.0.2
+  port: 3306
+  user: root
+  password: QA@2015
+  yanzhengma_db: sms_fyb_beta
+  fdb_test_db: fdb_test
+  report_test: report
+  charset: utf8
+
+header:
+  anzhuo: J04PXNKU19T1ONX07VRWUSGW38DLNN
+  pingguo: KX3RFJ6YB6FNR1DQAHGLYPWSEW0OQF
+  #zukeanzhuo: J04PXNKU19T1ONX07VRWUSGW38DLNN
+  pingguo1: yi lou fang dong/1.3 (iPhone; iOS 10.3.2; Scale/2.00)
+  accept: application/json
+  content_type: application/json
+  app_key: iwjw.superjia.com
+  pingguo_os:  iPhone OS
+  pingguo_os_beta: ios
+  imei_beta: B0298FED-2D66-490F-B103-3958E3CE8FB7
+  imei: 5F724E80-3C49-4EA8-8BBA-D23AF1A9886A
+  accept_encoding: gzip
+  data_type: json
+  ver: '2.3'
+
+Login_test:
+  mensuo: http://fffdappserver.iwjwtest.com/FffdAppServer/door/permissionDoorList.rest
+  #发送验证码
+  send_verifcode: http://fffdappserver.iwjwtest.com/FffdAppServer/user/send_verifycode.rest
+  #登录输入验证码
+  login_in: http://fffdappserver.iwjwtest.com/FffdAppServer/user/login.rest
+
+Login_beta:
+  mensuo: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/permissionDoorList.rest
+  #发送验证码
+  send_verifcode: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/send_verifycode.rest
+  #登录输入验证码
+  login_in: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/login.rest
+
+#实名
+shiming_beta:
+  #88、提交实名认证（v1.0）#realName;//真实姓名 idCard;//身份证号
+  bindIdentity: http://118.178.242.96:8371/FffdAppServer/account/bindIdentity.rest
+  #86、获取支持银行列表（v1.0）
+  getSupportBankList: http://118.178.242.96:8371/FffdAppServer/account/getSupportBankList.rest
+  #87、获取银行卡开户行（v1.0）
+  getCardBin: http://118.178.242.96:8371/FffdAppServer/account/getCardBin.rest
+  #3实名登记 dict1 = { "realName": name,"idCard": idCard}
+  realname_register: http://118.178.242.96:8371/FffdAppServer/user/realname_register.rest
+
+shiming_test:
+  #88、提交实名认证（v1.0）#realName;//真实姓名 idCard;//身份证号
+  bindIdentity: http://fffdappserver.iwjwtest.com/FffdAppServer/account/bindIdentity.rest
+  #86、获取支持银行列表（v1.0）
+  getSupportBankList: http://fffdappserver.iwjwtest.com/FffdAppServer/account/getSupportBankList.rest
+  #87、获取银行卡开户行（v1.0）
+  getCardBin: http://fffdappserver.iwjwtest.com/FffdAppServer/account/getCardBin.rest
+  #3实名登记 dict1 = { "realName": name,"idCard": idCard}
+  realname_register: http://fffdappserver.iwjwtest.com/FffdAppServer/user/realname_register.rest
+#新录房源
+New_source_beta:
+  #蘑菇租房自动登录 先掉登录
+  autoLogin: http://118.178.242.96:8371/FffdAppServer/housemove/autoLogin.rest
+  #蘑菇房源列表
+  listEstates: http://118.178.242.96:8371/FffdAppServer/housemove/listEstates.rest
+  #蘑菇房源详情  estateId=715  refresh=0
+  listHouses: http://118.178.242.96:8371/FffdAppServer/housemove/listHouses.rest
+  #获取estateList 参数keyword=万科  estateId=83505 estateName=万科翡翠公园
+  queryEstate: http://118.178.242.96:8371/FffdAppServer/house/queryEstate.rest
+  #获取subEstateId=135608  #参数estateId=83505
+  querySubEstates: http://118.178.242.96:8371/FffdAppServer/house/querySubEstates.rest
+  #发布合租
+  #1.building=1 2.decorateType=3  3.estateId=83505 4.estateName=万科翡翠公园 5.houseType=3 6.layers=0. 7onlyOne=0
+  #8.payMethod=0 9.room=1 10.roomCount=2 11.subEstateId=135608 12.subEstateName=百业路 13.ventilation=0
+  publish_joint_rent_house: http://118.178.242.96:8371/FffdAppServer/house/publish_joint_rent_house.rest
+  #发布整租
+  publish_rent: http://118.178.242.96:8371/FffdAppServer/house/publish_rent.rest
+  #删除房屋 houseId=1700
+  removeHouse: http://118.178.242.96:8371/FffdAppServer/house/removeHouse.rest
+  #房间添加面积和租金
+  #genderRequirement=1  houseId=1470  payMethod=2  需传price=2  rentId=5076   roomName=南2平  roomType=0  需传spaceArea=2   ventilation=3
+  update_rent: http://118.178.242.96:8371/FffdAppServer/house/update_rent.rest
+  #申请装锁  houseId=1470
+  applyInstallLock: http://118.178.242.96:8371/FffdAppServer/house/applyInstallLock.rest
+  #装锁审核中取消申请装锁 houseId=1470  source=1
+  cancelDoorInstallApply: http://118.178.242.96:8371/FffdAppServer/door/cancelDoorInstallApply.rest
+
+New_source_test:
+  #蘑菇租房自动登录 先掉登录
+  autoLogin: http://fffdappserver.iwjwtest.com/FffdAppServer/housemove/autoLogin.rest
+  #蘑菇房源列表
+  listEstates: http://fffdappserver.iwjwtest.com/FffdAppServer/housemove/listEstates.rest
+  #蘑菇房源详情  estateId=715  refresh=0
+  listHouses: http://fffdappserver.iwjwtest.com/FffdAppServer/housemove/listHouses.rest
+  #获取estateList 参数keyword=万科  estateId=83505 estateName=万科翡翠公园
+  queryEstate: http://fffdappserver.iwjwtest.com/FffdAppServer/house/queryEstate.rest
+  #获取subEstateId=135608  #参数estateId=83505
+  querySubEstates: http://fffdappserver.iwjwtest.com/FffdAppServer/house/querySubEstates.rest
+  #发布合租
+  #1.building=1 2.decorateType=3  3.estateId=83505 4.estateName=万科翡翠公园 5.houseType=3 6.layers=0. 7onlyOne=0
+  #8.payMethod=0 9.room=1 10.roomCount=2 11.subEstateId=135608 12.subEstateName=百业路 13.ventilation=0
+  publish_joint_rent_house: http://fffdappserver.iwjwtest.com/FffdAppServer/house/publish_joint_rent_house.rest
+  #发布整租
+  publish_rent: http://fffdappserver.iwjwtest.com/FffdAppServer/house/publish_rent.rest
+  #删除房屋 houseId=1700
+  removeHouse: http://fffdappserver.iwjwtest.com/FffdAppServer/house/removeHouse.rest
+  #房间添加面积和租金
+  #genderRequirement=1  houseId=1470  payMethod=2  需传price=2  rentId=5076   roomName=南2平  roomType=0  需传spaceArea=2   ventilation=3
+  update_rent: http://fffdappserver.iwjwtest.com/FffdAppServer/house/update_rent.rest
+  #申请装锁  houseId=1470
+  applyInstallLock: http://fffdappserver.iwjwtest.com/FffdAppServer/house/applyInstallLock.rest
+  #装锁审核中取消申请装锁 houseId=1470  source=1
+  cancelDoorInstallApply: http://fffdappserver.iwjwtest.com/FffdAppServer/door/cancelDoorInstallApply.rest
+
+#我的页面
+wode_test:
+  #点击我的
+  getMyInfo: http://fffdappserver.iwjwtest.com/FffdAppServer/userContact/getMyInfo.rest
+  #点击助理账号
+  getAssistantList: http://fffdappserver.iwjwtest.com/FffdAppServer/user/getAssistantList.rest
+  #添加助理  mobile=17400550066 name=阿粉哦
+  addAssistant: http://fffdappserver.iwjwtest.com/FffdAppServer/user/addAssistant.rest
+  #删除助理 userId=11587
+  delAssistant: http://fffdappserver.iwjwtest.com/FffdAppServer/user/delAssistant.rest
+  #点击联系人管理
+  getManagerList: http://fffdappserver.iwjwtest.com/FffdAppServer/user/getManagerList.rest
+  #修改联系人   mobile=02155555555 name=弄弄魔宗  type=1
+  editManagerInfo: http://fffdappserver.iwjwtest.com/FffdAppServer/user/editManagerInfo.rest
+  #获取交易记录  groupMode=1 timeBegin=2018-08-01 timeEnd=2018-08-31
+  queryTradeList: http://fffdappserver.iwjwtest.com/FffdAppServer/account/queryTradeList.rest
+  #交易记录详情 orderNo=101153414984297143359   bizType=PAY
+  queryTradeInfo: http://fffdappserver.iwjwtest.com/FffdAppServer/account/queryTradeInfo.rest
+  #帮助反馈  source=1
+  listHelpTypes: http://fffdappserver.iwjwtest.com/FffdAppServer/help/listHelpTypes.rest
+  #点击切换账号
+  #accountId切换的账号ID
+  switch_account: http://fffdappserver.iwjwtest.com/FffdAppServer/user/switch_account.rest
+  #设置助理线下收款权限&BD助理设置[v2.7更新] >
+  #assistantOfflinePay允许助理线下收款：0、否，1、是      allowBdAssistant允许BD助理：0、否，1、是
+  editUserSetting: http://fffdappserver.iwjwtest.com/FffdAppServer/user/editUserSetting.rest
+  #获取身份列表[v2.7新增] >
+  getIdentityList: http://fffdappserver.iwjwtest.com/FffdAppServer/user/getIdentityList.rest
+
+wode_beta:
+  #点击我的
+  getMyInfo: http://fffdappserver.iwjwbeta.com/FffdAppServer/userContact/getMyInfo.rest
+  #点击助理账号
+  getAssistantList: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/getAssistantList.rest
+  #添加助理  mobile=17400550066 name=阿粉哦
+  addAssistant: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/addAssistant.rest
+  #删除助理 userId=11587
+  delAssistant: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/delAssistant.rest
+  #点击联系人管理
+  getManagerList: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/getManagerList.rest
+  #修改联系人   mobile=02155555555 name=弄弄魔宗  type=1
+  editManagerInfo: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/editManagerInfo.rest
+  #获取交易记录  groupMode=1 timeBegin=2018-08-01 timeEnd=2018-08-31
+  queryTradeList: http://fffdappserver.iwjwbeta.com/FffdAppServer/account/queryTradeList.rest
+  #交易记录详情 orderNo=101153414984297143359   bizType=PAY
+  queryTradeInfo: http://fffdappserver.iwjwbeta.com/FffdAppServer/account/queryTradeInfo.rest
+  #帮助反馈  source=1
+  listHelpTypes: http://fffdappserver.iwjwbeta.com/FffdAppServer/help/listHelpTypes.rest
+  #设置助理线下收款权限&BD助理设置[v2.7更新] >
+  #assistantOfflinePay允许助理线下收款：0、否，1、是      allowBdAssistant允许BD助理：0、否，1、是
+  editUserSetting: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/editUserSetting.rest
+#点击切换账号
+  #accountId切换的账号ID
+  switch_account: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/switch_account.rest
+  #获取身份列表[v2.7新增] >
+  getIdentityList:  http://fffdappserver.iwjwbeta.com/FffdAppServer/user/getIdentityList.rest
+
+#租约
+contract_beta:
+  #点击创建合同 rentId=3720
+  Click_Create_contract: http://118.178.242.96:8371/FffdAppServer/contract/showMonthPay.rest
+  #输入承租人
+  #renterMobile=17400330093  renterName=jfjjfj  renterType=1
+  Lessee: http://118.178.242.96:8371/FffdAppServer/contract/addShareRenter4Landlord.rest
+  #点击下一步创建合同
+  #contractType=0 credentialType=1 **deposit=300 endDate=2019-08-29  mainRenterId=11078 monthPay=1（是否开启一楼月付（1：开启、0：关闭）'）  付钱周期12paymentCycle=1  提前14天paymentDate=0
+  # **rental=300 renterCount=2  rentId=3720 roomNo=1 serviceFeePayer=1
+  #startDate=2018-08-30   type=2
+  #返回contractId=3585
+  next_step: http://118.178.242.96:8371/FffdAppServer/contract/addRentContract.rest
+  #创建账单
+  #contractId=3585
+  Create_bill: http://118.178.242.96:8371/FffdAppServer/contract/getRentContractDetail.rest
+  #生成账单contractId=3585
+  setBillPaid: http://118.178.242.96:8371/FffdAppServer/bill/setBillPaid.rest
+  #获取租约列表 {"pageSize":20,"pageNo":1}
+  listRentContract4Landlord: http://118.178.242.96:8371/FffdAppServer/contract/listRentContract4Landlord.rest
+  #单个租约详细信息 {"contractId":3584}
+  getRentContractDetail: http://118.178.242.96:8371/FffdAppServer/contract/getRentContractDetail.rest
+  #待确认合同点击终止合同{"contractId":3542}
+  terminateRentContract: http://118.178.242.96:8371/FffdAppServer/contract/terminateRentContract.rest
+  #解约合同 参数contractId=3580
+  Contract_of_dissolution: http://118.178.242.96:8371/FffdAppServer/contract/terminateRentContract.rest
+  #获取合同具体信息  contractId=3702
+  getReleaseContractDetail: http://118.178.242.96:8371/FffdAppServer/contract/getReleaseContractDetail.rest
+  #选择快速退房结账后点击确认 contractId=3702  defaultFee=-2.25 deposit=-3.00 livingFee=0.00 otherFee=+7.95  rental=-2.70 remark=
+  createReleaseContract: http://118.178.242.96:8371/FffdAppServer/contract/createReleaseContract.rest
+  #获取生活费用账单类型 比如memo=燃气费  type=3
+  getAllBillLivingTypes: http://118.178.242.96:8371/FffdAppServer/bill/getAllBillLivingTypes.rest
+  #增加生活费  billItems=4-33.00  contractId=3721  payDate=2018-09-14
+  addRentBill: http://118.178.242.96:8371/FffdAppServer/bill/addRentBill.rest
+  #获取账单列表contractId=3721   payStatus=0  type=0
+  listRentBill4Landlord: http://118.178.242.96:8371/FffdAppServer/bill/listRentBill4Landlord.rest
+  #查看租约列表rentId=3720  optSource=1
+  listRentContract4Landlord: http://118.178.242.96:8371/FffdAppServer/contract/listRentContract4Landlord.rest
+
+#租约
+contract_test:
+  #点击创建合同 rentId=3720
+  Click_Create_contract: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/showMonthPay.rest
+  #输入承租人
+  #renterMobile=17400330093  renterName=jfjjfj  renterType=1
+  Lessee: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/addShareRenter4Landlord.rest
+  #点击下一步创建合同
+  #contractType=0 credentialType=1 **deposit=300 endDate=2019-08-29  mainRenterId=11078 monthPay=1（是否开启一楼月付（1：开启、0：关闭）'）  付钱周期12paymentCycle=1  提前14天paymentDate=0
+  # **rental=300 renterCount=2  rentId=3720 roomNo=1 serviceFeePayer=1
+  #startDate=2018-08-30   type=2
+  #返回contractId=3585
+  next_step: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/addRentContract.rest
+  #创建账单
+  #contractId=3585
+  Create_bill: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/getRentContractDetail.rest
+  #生成账单contractId=3585
+  setBillPaid: http://fffdappserver.iwjwtest.com/FffdAppServer/bill/setBillPaid.rest
+  #获取租约列表 {"pageSize":20,"pageNo":1}
+  listRentContract4Landlord: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/listRentContract4Landlord.rest
+  #单个租约详细信息 {"contractId":3584}
+  getRentContractDetail: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/getRentContractDetail.rest
+  #待确认合同点击终止合同{"contractId":3542}
+  terminateRentContract: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/terminateRentContract.rest
+  #解约合同 参数contractId=3580
+  Contract_of_dissolution: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/terminateRentContract.rest
+  #获取合同具体信息  contractId=3702
+  getReleaseContractDetail: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/getReleaseContractDetail.rest
+  #选择快速退房结账后点击确认 contractId=3702  defaultFee=-2.25 deposit=-3.00 livingFee=0.00 otherFee=+7.95  rental=-2.70 remark=
+  createReleaseContract: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/createReleaseContract.rest
+  #获取生活费用账单类型 比如memo=燃气费  type=3
+  getAllBillLivingTypes: http://fffdappserver.iwjwtest.com/FffdAppServer/bill/getAllBillLivingTypes.rest
+  #增加生活费  billItems=4-33.00  contractId=3721  payDate=2018-09-14
+  addRentBill: http://fffdappserver.iwjwtest.com/FffdAppServer/bill/addRentBill.rest
+  #获取账单列表contractId=3721   payStatus=0  type=0
+  listRentBill4Landlord: http://fffdappserver.iwjwtest.com/FffdAppServer/bill/listRentBill4Landlord.rest
+  #查看租约列表rentId=3720  optSource=1
+  listRentContract4Landlord: http://fffdappserver.iwjwtest.com/FffdAppServer/contract/listRentContract4Landlord.rest
+
+#带看
+daikan:
+  #点击带看  agentUserType":1
+  homeCount: http://118.178.242.96:8371/FffdAppServer/agent/homeCount.rest
+#房源出房设置点击修改信息
+chufangwenan:
+  #点击修改信息rentId=3720
+  getRentConfig: http://118.178.242.96:8371/FffdAppServer/house/getRentConfig.rest
+#房源
+fangyuan_beta:
+  #进入app获取信息接口
+  permissionDoorList: http://118.178.242.96:8371/FffdAppServer/door/permissionDoorList.rest
+  #首页代办事项
+  myHouseContractCount: http://fffdappserver.iwjwbeta.com/FffdAppServer/user/myHouseContractCount.rest
+  #getHouseApply
+  getHouseApply: http://118.178.242.96:8371/FffdAppServer/house/getHouseApply.rest
+ #获取房源列表
+  myHouseList1: http://fffdappserver.iwjwbeta.com/FffdAppServer/house/myHouseList.rest
+ #71获取合租房子详情 请求参数{“houseId”:111}
+  getJointRentHouseDetail:  http://fffdappserver.iwjwbeta.com/FffdAppServer/house/getJointRentHouseDetail.rest
+ # 72获取合租房间列表   请求参数{"houseId":111}
+  listJointRentRoom: http://fffdappserver.iwjwbeta.com/FffdAppServer/house/listJointRentRoom.rest
+ #41获取房间详情
+  houseDetail: http://fffdappserver.iwjwbeta.com/FffdAppServer/house/houseDetail.rest
+ #82、我的房子小区列表V1.2
+  myHouseEstate: http://fffdappserver.iwjwbeta.com/FffdAppServer/house/myHouseEstate.rest
+
+#房源
+fangyuan_test:
+  #进入app获取信息接口
+  permissionDoorList: http://fffdappserver.iwjwtest.com/FffdAppServer/door/permissionDoorList.rest
+  #首页代办事项
+  myHouseContractCount: http://fffdappserver.iwjwtest.com/FffdAppServer/user/myHouseContractCount.rest
+  #getHouseApply
+  getHouseApply: http://fffdappserver.iwjwtest.com/FffdAppServer/house/getHouseApply.rest
+ #获取房源列表
+  myHouseList1: http://fffdappserver.iwjwtest.com/FffdAppServer/house/myHouseList.rest
+ #71获取合租房子详情 请求参数{“houseId”:111}
+  getJointRentHouseDetail:  http://fffdappserver.iwjwtest.com/FffdAppServer/house/getJointRentHouseDetail.rest
+ # 72获取合租房间列表   请求参数{"houseId":111}
+  listJointRentRoom: http://fffdappserver.iwjwtest.com/FffdAppServer/house/listJointRentRoom.rest
+ #41获取房间详情
+  houseDetail: http://fffdappserver.iwjwtest.com/FffdAppServer/house/houseDetail.rest
+ #82、我的房子小区列表V1.2
+  myHouseEstate: http://fffdappserver.iwjwtest.com/FffdAppServer/house/myHouseEstate.rest
+
+#门锁相关
+mensuo:
+ #120、获取门锁基本信息(v1.0新增)  "doorId":11，门锁ID
+  getDoorBaseInfo: http://fffdappserver.iwjwtest.com/FffdAppServer/door/getDoorBaseInfo.rest
+ #121、获取门锁临时密码列表(v1.0新增)
+  listDoorTempPWD: http://118.178.242.96:8371/FffdAppServer/door/listDoorTempPWD.rest
+ #122、获取门锁开门记录(v1.0新增)
+  listDoorOpen: http://118.178.242.96:8371/FffdAppServer/door/listDoorTempPWD.rest
+ #123、修改门锁密码(v1.0新增)
+  updateDoorPWD: http://118.178.242.96:8371/FffdAppServer/door/updateDoorPWD.rest
+ #125、删除门锁密码(v1.0新增)
+  delDoorPWD: http://118.178.242.96:8371/FffdAppServer/door/delDoorPWD.rest
+ #126、获取新密码(v1.0新增)
+  getNewDoorPWD: http://118.178.242.96:8371/FffdAppServer/door/getNewDoorPWD.rest
+ #127、获取房源门锁列表(v1.0新增)
+  listDoorInfo: http://118.178.242.96:8371/FffdAppServer/door/listDoorInfo.rest
+ # 128、新增门锁(v1.0新增)
+  addDoor: http://118.178.242.96:8371/FffdAppServer/door/addDoor.rest
+ #129、发送短信(v1.0新增)
+  sendDoorPWDMessage: http://118.178.242.96:8371/FffdAppServer/door/sendDoorPWDMessage.rest
+ #130、申请紧急临时密码(v1.1新增)
+  applyUrgentTempPWD: http://118.178.242.96:8371/FffdAppServer/door/applyUrgentTempPWD.rest
+ #131、一键开门(v1.1新增)
+  openDoor: http://118.178.242.96:8371/FffdAppServer/door/openDoor.rest
+ #133、新增门锁问题反馈(v1.1新增)
+  addDoorFeedback: http://118.178.242.96:8371/FffdAppServer/door/addDoorFeedback.rest
+ #134、新增小区问题反馈
+  addEstateFeedback: http://118.178.242.96:8371/FffdAppServer/door/addEstateFeedback.rest
+ #136、删除房屋(v1.3新增)
+  removeHouse: http://118.178.242.96:8371/FffdAppServer/house/removeHouse.rest
+ #143、检查用户是否有门锁权限(v1.1新增)
+  checkUserPerms: http://118.178.242.96:8371/FffdAppServer/system/getConfigInfo.rest
+ #新增临时密码
+  addDoorGuestPwd: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/addDoorGuestPwd.rest
+ #生成预设密码
+  generatePresetPwd: http://192.168.1.90:8339/generatePresetPwd.action
+ #补偿预设密码
+  updateExpiredPresetPwd: http://192.168.1.90:8339/updateExpiredPresetPwd.action
+  #http://192.168.1.90:8636/job/freezeBillJob.action测试环境账单逾期
+  #获取房源门锁信息
+  listDoorInfo: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/listDoorInfo.rest
+
+yunyinghoutai:
+#运营后台
+  #审核失败 failReason=YJHGF（失败原因）  failReasonType=2    fdbHouseId	=1732    ffopOperateType	=9  userId=‘’
+  cancelDoorInstallApply: http://ffop.iwjwtest.com/op/house/cancelDoorInstallApply
+  #申请装锁fdbHouseId=‘’ lockBrandRadio=‘’
+  addDoor: http://ffop.iwjwtest.com/op/house/addDoor
+
+xiaochengxu:
+#出房分析图表
+  rent_analysis: http://fffdappserver.iwjwbeta.com/FffdAppServer/house/rent_analysis.rest

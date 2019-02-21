@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/bootstrap/css/bootstrap.css">
+    <title>Change product</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/apitest_manage/">&nbsp;&nbsp;流程接口测试</a></li>
+                <li><a href="#">&nbsp;&nbsp;流程接口测试步骤</a></li>
+                <li><a href="/single_interface_manage/">&nbsp;&nbsp;单一接口测试</a></li>
+                <li><a href="/bug_manage/">&nbsp;&nbsp;BUG列表</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-user"></i> {{ user }}</a>
+                </li>
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="col-md-5">
+    <h1></h1>
+    <br>
+    <h2 class="page-header">Change Module</h2>
+    <form action="/module/{{ modules.id }}/change/" method="post">
+        <div class="form-group">
+            <label>模块名</label>
+            <input type="text" name="module_name" class="form-control" value="{{ modules.module_name }}" required
+                   autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>模块测试人员</label>
+            <input type="text" name="module_tester" class="form-control" value="{{ modules.module_tester }}" required
+                   autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>模块开发人员</label>
+            <input type="text" name="module_developer" class="form-control" value="{{ modules.module_developer }}"
+                   autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>模块状态</label>
+            <select class="form-control" name="module_status">
+                <option value="{{ modules.module_status }}" selected>{{ modules.module_status }}</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>模块描述</label>
+            <textarea class="form-control" name="module_desc" rows="4" value="{{ modules.module_desc }}"
+                      autocomplete="off"></textarea>
+        </div>
+        <button class="btn btn-default" type="submit" name="submit">修改项目</button>
+    </form>
+</div>
+</body>
+</html>

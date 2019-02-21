@@ -1,0 +1,10 @@
+ #http://192.168.1.90:8636/job/freezeBillJob.action测试环境账单逾期
+
+ #http://118.178.242.96:8636/job/freezeBillJob.action beta环境账单逾期
+
+ #生成预设密码generatePresetPwd: http://192.168.1.90:8339/generatePresetPwd.action
+
+ #补偿预设密码updateExpiredPresetPwd: http://192.168.1.90:8339/updateExpiredPresetPwd.action
+
+ #http://118.178.242.96:8339/generateLocalPwd.action生成本地密码
+ #http://118.178.242.96:8339/generateLocalPwd.action

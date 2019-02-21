@@ -1,0 +1,11 @@
+beta_table:
+  fdb_beta:
+    fdb_house: fdb_house
+    fdb_house_door: fdb_house_door
+    fdb_house_door_authorize: fdb_house_door_authorize
+    fdb_house_door_open: fdb_house_door_open
+    fdb_house_door_user: fdb_house_door_user
+
+  fdb_contract_bill_beta:
+    fdb_renter_bill: fdb_renter_bill
+    fdb_renter_contract: fdb_renter_contract

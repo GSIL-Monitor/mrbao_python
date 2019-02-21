@@ -1,0 +1,119 @@
+1528275151382	geckodriver	INFO	geckodriver 0.20.1
+1528275151390	geckodriver	INFO	Listening on 127.0.0.1:57697
+1528275153930	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\adin\\AppData\\Local\\Temp\\rust_mozprofile.Rz50Jw8ckP7Z"
+1528275155934	Marionette	INFO	Listening on port 57711
+1528275157060	Marionette	WARN	TLS certificate errors will be ignored for this session
+1528275228268	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 287: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 287: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528338425333	Marionette	INFO	Ceased listening
+1530260631876	geckodriver	INFO	geckodriver 0.21.0
+1530260631886	geckodriver	INFO	Listening on 127.0.0.1:63805
+1530260815990	geckodriver	INFO	geckodriver 0.21.0
+1530260816000	geckodriver	INFO	Listening on 127.0.0.1:65250
+1530260856626	geckodriver	INFO	geckodriver 0.21.0
+1530260856636	geckodriver	INFO	Listening on 127.0.0.1:49170
+1530260912763	geckodriver	INFO	geckodriver 0.21.0
+1530260912772	geckodriver	INFO	Listening on 127.0.0.1:49568
+1530261127597	geckodriver	INFO	Listening on 127.0.0.1:51149
+1530261130660	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.ygRmE54eNtqK
+1530261130664	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1530261130674	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51173
+1530261131401	Marionette	INFO	Listening on port 51173
+1530685560377	geckodriver	INFO	Listening on 127.0.0.1:52567
+1530685563438	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.8hCUgNxoSUh7
+1530685563441	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1530685563452	geckodriver::marionette	INFO	Connecting to Marionette on localhost:52596
+1530685563912	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+[Child 40012] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 40012] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 42540] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 42460] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 42460] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2400FC,name=PContent::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 42364] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1530685645707	geckodriver	INFO	Listening on 127.0.0.1:53240
+1530685648750	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.A4WNND3exPV2
+1530685648754	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1530685648764	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53269
+1530685649217	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+[Parent 39636] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 37668] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 37668] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 15484] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1531897416948	geckodriver	INFO	Listening on 127.0.0.1:62397
+1531897419948	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.Et78MEf9tE4Y
+1531897419953	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1531897419962	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62443
+1531897421728	Marionette	INFO	Listening on port 2828
+[Parent 10620, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10620, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+[Child 8692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10620, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 3284, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1531897446663	geckodriver	INFO	Listening on 127.0.0.1:62732
+1531897448170	geckodriver	INFO	Listening on 127.0.0.1:62748
+1531897902602	geckodriver	INFO	Listening on 127.0.0.1:51049
+1531897905637	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.hSWIeEEJN3ht
+1531897905641	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1531897905648	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51085
+1531897907727	Marionette	INFO	Listening on port 2828
+[Parent 6456, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13632, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 11656, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1534923017672	geckodriver	INFO	Listening on 127.0.0.1:63915
+1534923020711	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.4pKsBmJiLjTU
+1534923020716	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1534923020725	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63945
+1534923022775	Marionette	INFO	Listening on port 2828
+1534923024087	geckodriver	INFO	Listening on 127.0.0.1:63998
+1534923027150	mozprofile::profile	INFO	Using profile path C:1534923029519	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.0RJuxfEkW1tK
+1534923029527	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1534923029533	geckodriver::marionette	INFO	Connecting to Marionette on localhost:[Parent 5388, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1JavaScript warning: https://start.firefoxchina.cn/js/tabLib-min.js?v=20150120, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 16184, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 16184, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 16184, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 15864, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1534924724389	geckodriver	INFO	Listening on 127.0.0.1:65016
+1534924727417	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.kLPz0WGkv7TL
+1534924727419	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1534924727425	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65052
+1534925180122	geckodriver	INFO	Listening on 127.0.0.1:53248
+1534925183144	mozprofile::profile	INFO	Using profile path C:\Users\adin\AppData\Local\Temp\rust_mozprofile.9enUXQgUWwYy
+1534925183146	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1534925183152	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53278
+1534925183755	Marionette	INFO	Listening on port 53278
+1534925293396	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error

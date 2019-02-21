@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body role="document">
+<!--导航栏-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/product_manage/">&nbsp;&nbsp;产品列表</a></li>
+                <li><a href="/module_page/">&nbsp;&nbsp;模块列表</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-user"></i> {{ user }}</a>
+                </li>
+                <li><a href="../product_manage" target="mainFrame"> <i
+                        class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--产品列表-->
+<div class="form-row">
+    <div class="col-md-ll">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>报告名称</th>
+                <th>测试执行人</th>
+                <th>报告HTML</th>
+                <th>报告时间</th>
+
+            </thead>
+            <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>
+                    <a href="/module_page/">{{ product.product_name }}</a>
+                </td>
+                <td>{{ product.product_desc }}</td>
+                <td>{{ product.producter_tester }}</td>
+                <td>{{ product.prpducter_version }}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

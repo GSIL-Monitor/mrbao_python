@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/bootstrap/css/bootstrap.css">
+    <title>产品自动化测试平台</title>
+</head>
+<body role="document">
+<!--导航栏-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+
+             <ul class="nav navbar-nav navbar-right">
+             <li><a href="../product_manage" target="mainFrame"> <i
+                    class="glyphicon glyphicon-user"></i> {{ user }}</a>
+            </li>
+            <li><a href="../product_manage" target="mainFrame"> <i
+                    class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+
+<!--产品列表-->
+<div class="form-row">
+    <div class="col-md-ll">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th><th>用户名</th><th>密码</th><th>邮箱</th><th>最近登陆日期</th><th>注册日期</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{  user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.last_login }}</td>
+                <td>{{ user.date_joined }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

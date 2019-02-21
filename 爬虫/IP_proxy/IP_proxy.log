@@ -1,0 +1,25 @@
+2018-03-16 10:19:32,386 - INFO - 正在打开https://www.kuaidaili.com/
+2018-03-16 10:19:32,921 - INFO - 正在点击免费代理
+2018-03-16 10:19:36,449 - INFO - 正在执行JS。。。。。
+2018-03-16 10:19:40,674 - INFO - 正在获取HTM。。。
+2018-03-16 10:19:40,680 - INFO - 获取url:set()
+2018-03-16 10:19:40,680 - INFO - 获取url:{'https://www.kuaidaili.com/free/inha/1/'}
+2018-03-16 10:19:40,680 - INFO - 获取url:{'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/2/'}
+2018-03-16 10:19:40,680 - INFO - 获取url:{'https://www.kuaidaili.com/free/inha/3/', 'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/2/'}
+2018-03-16 10:19:40,680 - INFO - 获取url:{'https://www.kuaidaili.com/free/inha/3/', 'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/4/', 'https://www.kuaidaili.com/free/inha/2/'}
+2018-03-16 10:19:40,692 - INFO - 获取url:{'https://www.kuaidaili.com/free/inha/3/', 'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/5/', 'https://www.kuaidaili.com/free/inha/4/', 'https://www.kuaidaili.com/free/inha/2/'}
+2018-03-16 10:19:40,692 - INFO - 获取url:{'https://www.kuaidaili.com/free/inha/4/', 'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/2/', 'https://www.kuaidaili.com/free/inha/3/', 'https://www.kuaidaili.com/free/inha/5/', 'https://www.kuaidaili.com/free/inha/2204/'}
+2018-03-16 10:19:41,198 - INFO - 点击下一页：2
+2018-03-16 15:20:24,257 - INFO - Now open https://www.kuaidaili.com/
+2018-03-16 15:20:25,667 - INFO - xitong is clicking free's proxy
+2018-03-16 15:20:29,277 - INFO - xitong is excuxeing JS。。。。。
+2018-03-16 15:20:33,561 - INFO - print html
+2018-03-16 15:20:33,564 - INFO - huoqu url:set()
+2018-03-16 15:20:33,565 - INFO - huoqu url:{'https://www.kuaidaili.com/free/inha/1/'}
+2018-03-16 15:20:33,565 - INFO - huoqu url:{'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/2/'}
+2018-03-16 15:20:33,565 - INFO - huoqu url:{'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/2/', 'https://www.kuaidaili.com/free/inha/3/'}
+2018-03-16 15:20:33,565 - INFO - huoqu url:{'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/2/', 'https://www.kuaidaili.com/free/inha/4/', 'https://www.kuaidaili.com/free/inha/3/'}
+2018-03-16 15:20:33,565 - INFO - huoqu url:{'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/5/', 'https://www.kuaidaili.com/free/inha/2/', 'https://www.kuaidaili.com/free/inha/4/', 'https://www.kuaidaili.com/free/inha/3/'}
+2018-03-16 15:20:33,565 - INFO - huoqu url:{'https://www.kuaidaili.com/free/inha/1/', 'https://www.kuaidaili.com/free/inha/3/', 'https://www.kuaidaili.com/free/inha/5/', 'https://www.kuaidaili.com/free/inha/2205/', 'https://www.kuaidaili.com/free/inha/2/', 'https://www.kuaidaili.com/free/inha/4/'}
+2018-03-16 15:20:34,034 - INFO - 点击下一页：2
+2018-03-16 15:20:34,061 - INFO - xitong is excuxeing JS。。。。。

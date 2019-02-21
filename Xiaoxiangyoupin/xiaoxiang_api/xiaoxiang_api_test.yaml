@@ -1,0 +1,28 @@
+Login:
+    login_url: http://dev.xiaoxiangyoupin.com:1111/v2/user/gustLogin.json
+
+Nianhuojie:
+    #【年货活动】抽卡   token
+    drawCard: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/drawCard.json
+
+    #查询用户剩余抽卡次数 token
+    surplusDrawCardCount: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/surplusDrawCardCount.json
+
+    #查询用户是否能兑奖
+    queryCashOrNot: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/queryCashOrNot.json
+
+    #查询用户集卡信息
+    queryDrawCardCollectInfo: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/queryDrawCardCollectInfo.json
+
+    #用户分享行为上报接口
+    share: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/share.json
+
+    #用户现金奖励明细接口
+    getUserAwardList: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/getUserAwardList.json
+
+    #集卡兑奖
+    cash: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/cash.json
+
+Yanzhika:
+
+Qinglvka:

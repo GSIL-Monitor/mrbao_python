@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/bootstrap/css/bootstrap.min.css">
+    <title>AutotestPlat</title>
+    <style> body{text-align:center} </style>
+</head>
+<body>
+<div>
+    <font size="5">
+        <h1>AutoTestPlat</h1>
+    </font>
+    <form method="post" action="/login/">
+        {% csrf_token %}
+        <br>
+        <a>
+            <i class="glyphicon glyphicon-user"></i>
+            &nbsp;&nbsp;用户名：
+        </a>
+        <input name="username" type="text" placeholder="test">
+        <!--placeholder="test"   value="test"-->
+        <br><br> <a>&nbsp;&nbsp;密 &nbsp;&nbsp; 码：</a> <input name="password" type="password" placeholder="test123456">
+        <!-- placeholder="test123456" value="test123456"-->
+        <br>{{ error }}<br>
+        &nbsp;
+        <button id="submit" type="submit" onclick="alert('欢迎!')" class="btn btn-primary">登 录</button>
+    </form>
+</div>
+</body>
+</html>

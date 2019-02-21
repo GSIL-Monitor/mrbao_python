@@ -1,0 +1,26 @@
+login_01:
+        case_name: test_success_login
+        case_desc: 正常登录
+        request:
+            api_method: post
+            drawCard: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/drawCard.json
+            data:
+                mobile: 18501787063
+                verifcode: 8888888
+        response:
+            actual_result: 200
+            expected_result: 200
+
+login_02:
+        case_name: test_success_login
+        case_desc: 正常登录
+        request:
+            api_method: post
+            drawCard: http://dev.xiaoxiangyoupin.com:1111/v2/activity/annualGoods/drawCard.json
+            data:
+                mobile: 18501787063
+                verifcode: 888888
+        response:
+            actual_result: 200
+            expected_result: 200
+

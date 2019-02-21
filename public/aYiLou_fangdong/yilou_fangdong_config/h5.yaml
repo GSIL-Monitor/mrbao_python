@@ -1,0 +1,36 @@
+mensuo_beta:
+  #获取门锁所有有权限用户列表 doorId=133
+  listUser: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/listUser.rest
+
+  #房东解冻租客 userId  doorId
+  unfreezeRenter:  http://fffdappserver.iwjwbeta.com/FffdAppServer/door/unfreezeRenter.rest
+
+  #房东冻结租客 userId  doorId
+  freezeRenter: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/freezeRenter.rest
+
+  #获取门锁基本信息doorId
+  getDoorBaseInfo: http://fffdappserver.iwjwbeta.com/FffdAppServer/door/getDoorBaseInfo.rest
+
+  #获取门锁开门记录doorId  authUserId  startTime   endTime
+  listDoorOpen2: http://fffdappserver.iwjwbeta.com/door/listDoorOpen2.rest
+
+  #获取门锁临时密码列表doorId
+  listDoorTempPWD: http://fffdappserver.iwjwbeta.com/door/listDoorTempPWD.rest
+
+  #获得当前是否工作时间
+  holiday: http://fffdappserver.iwjwbeta.com/system/holiday.rest
+
+
+
+mensuo_test:
+  #获取门锁所有有权限用户列表 doorId=133
+  listUser: http://fffdappserver.iwjwtest.com/FffdAppServer/door/listUser.rest
+
+  #房东解冻租客 userId  doorId
+  unfreezeRenter:  http://fffdappserver.iwjwtest.com/FffdAppServer/door/unfreezeRenter.rest
+
+  #房东冻结租客 userId  doorId
+  freezeRenter: http://fffdappserver.iwjwtest.com/FffdAppServer/door/freezeRenter.rest
+
+  #获取门锁基本信息doorId
+  getDoorBaseInfo: http://fffdappserver.iwjwtest.com/FffdAppServer/door/getDoorBaseInfo.rest
