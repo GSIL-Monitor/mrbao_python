@@ -13,15 +13,14 @@ logging.config.fileConfig(con_log)
 async def chaxun_wenian(yaml_path='',wenjianming=''):
     '''
     查询目录下文件，并返回文件地址
-    :param wenjianming: 
-    :return: 
+    :param yaml_path: 目录地址
+    :param wenjianming: 文件名
+    :return: 文件列表（list）
     '''
-    wenjian_list = []
-    if yaml_path=='':#判断yaml——path是否为空
-        logging.info("正在执行%s" % chaxun_wenian.__name__)
-
+    wenjian_list = []#文件列表
+    if yaml_path=='':#判断yaml_path是否为空
+        logging.info("正在执行%s,参数yaml_path为空" % chaxun_wenian.__name__)
         yaml_path = os.path.dirname(os.path.dirname(__file__))
-
         if wenjianming != None:
             yaml_path = yaml_path + "/" + wenjianming + "/"
 
@@ -33,8 +32,8 @@ async def chaxun_wenian(yaml_path='',wenjianming=''):
         return wenjian_list
     else:#判断传入地址参数
         if wenjianming != None:
+            logging.info("正在执行%s，参数yaml_path不为空" % chaxun_wenian.__name__)
             list_path = yaml_path + "/" + wenjianming + "/"
-
             file = os.listdir(list_path)  # 打印yaml_path下的文件
             for filename in file:
                 wenjian_path = os.path.join(list_path, filename)
@@ -62,7 +61,7 @@ async def get_path_yaml(yaml_path):
                 shuju = yaml.load(shuju_name)  # 序列化
                 stream.close()
                 if shuju != None:
-                    print(shuju)
+                    # print(shuju)
                     for case in shuju:
                         if shuju[case] != None:
                             case_list.append(shuju[case])
@@ -104,7 +103,7 @@ def start_async(func):
     # semaphore=asyncio.Semaphore()
     # 创建携程对象
     task = asyncio.ensure_future(func)  # 创建任务
-
+    logging.info("正在创建携程任务%s" % task)
     loop.run_until_complete(task)
 
     return task.result()
@@ -135,7 +134,7 @@ def check_case_address(data, wenjianming):
             #     wenjian_path = os.path.join(yaml_path, filename)
             #     wenjian_list.append(wenjian_path)  # 把yaml_path下的文件路径放入wenjian_list中
             wenjian_list=start_async(chaxun_wenian(wenjianming=wenjianming))
-            print(wenjian_list)
+            # print(wenjian_list)
             for key in keys:
                 filepath = yaml_path + key + '_test.yaml'
                 logging.info("%s文件地址是%s" % (key, filepath))
