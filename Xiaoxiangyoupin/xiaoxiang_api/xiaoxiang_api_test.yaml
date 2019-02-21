@@ -26,3 +26,13 @@ Nianhuojie:
 Yanzhika:
 
 Qinglvka:
+
+Jinbixitong:
+    #金币流水明细
+    paymentDetails: http://dev.xiaoxiangyoupin.com:1111/v2/coin/paymentDetails.json
+
+    #签到
+    sign: http://dev.xiaoxiangyoupin.com:1111/v2/coin/sign.json
+
+    #签到快关
+    signRemindSwitch: http://dev.xiaoxiangyoupin.com:1111/v2/coin/signRemindSwitch.json

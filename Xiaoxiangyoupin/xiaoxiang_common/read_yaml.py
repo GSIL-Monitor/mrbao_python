@@ -10,6 +10,40 @@ import time
 con_log = r'F:\mrbao_python\Xiaoxiangyoupin\xiaoxiang_peizhi\logging.conf'
 logging.config.fileConfig(con_log)
 
+async def chaxun_wenian(yaml_path='',wenjianming=''):
+    '''
+    查询目录下文件，并返回文件地址
+    :param wenjianming: 
+    :return: 
+    '''
+    wenjian_list = []
+    if yaml_path=='':#判断yaml——path是否为空
+        logging.info("正在执行%s" % chaxun_wenian.__name__)
+
+        yaml_path = os.path.dirname(os.path.dirname(__file__))
+
+        if wenjianming != None:
+            yaml_path = yaml_path + "/" + wenjianming + "/"
+
+            file = os.listdir(yaml_path)  # 打印yaml_path下的文件
+            for filename in file:
+                wenjian_path = os.path.join(yaml_path, filename)
+                wenjian_list.append(wenjian_path)  # 把yaml_path下的文件路径放入wenjian_list中
+                # logging.info("文件地址是%s" % wenjian_list)
+        return wenjian_list
+    else:#判断传入地址参数
+        if wenjianming != None:
+            list_path = yaml_path + "/" + wenjianming + "/"
+
+            file = os.listdir(list_path)  # 打印yaml_path下的文件
+            for filename in file:
+                wenjian_path = os.path.join(list_path, filename)
+                wenjian_list.append(wenjian_path)  # 把yaml_path下的文件路径放入wenjian_list中
+                #logging.info("文件地址是%s" % wenjian_list)
+        return wenjian_list
+
+
+
 
 async def get_path_yaml(yaml_path):
     '''
@@ -18,24 +52,26 @@ async def get_path_yaml(yaml_path):
     :param yaml_name: 
     :return: 
     '''
-    case_list=[]#创建用例list
+    case_list = []  # 创建用例list
     logging.info("正在执行%s" % get_path_yaml.__name__)
     if yaml_path != None and isinstance(yaml_path, list):
         for file_path in yaml_path:
             logging.info("当前打开地址为%s" % file_path)
             async with aiofiles.open(file_path, 'r', encoding='utf-8') as stream:
-                shuju_name = await stream.read()#读取file_path文件中的内容
-                shuju =  yaml.load(shuju_name)#序列化
+                shuju_name = await stream.read()  # 读取file_path文件中的内容
+                shuju = yaml.load(shuju_name)  # 序列化
                 stream.close()
-                for case in shuju:
-                    case_list.append(shuju[case])
-        return case_list
-
+                if shuju != None:
+                    print(shuju)
+                    for case in shuju:
+                        if shuju[case] != None:
+                            case_list.append(shuju[case])
+        return case_list#返回用例列表
 
 
 async def get_yaml(wenjianming, content_name, yaml_name=''):
     '''
-    异步读取
+    异步读取yaml文件
     :return: 
     '''
     logging.info("正在执行%s" % get_yaml.__name__)
@@ -65,13 +101,12 @@ def start_async(func):
     '''
     logging.info("正在执行%s" % start_async.__name__)
     loop = asyncio.get_event_loop()  # 创建事件循环
-    semaphore=asyncio.Semaphore()
-     # 创建携程对象
+    # semaphore=asyncio.Semaphore()
+    # 创建携程对象
     task = asyncio.ensure_future(func)  # 创建任务
-    try:
-        loop.run_until_complete(task)
-    finally:
-        loop.close()
+
+    loop.run_until_complete(task)
+
     return task.result()
 
 
@@ -82,30 +117,32 @@ def check_case_address(data, wenjianming):
     :param wenjianming: 
     :return: 
     '''
-    logging.info("正在执行%s"%check_case_address.__name__)
+    wenjian_list=[]
+    logging.info("正在执行%s" % check_case_address.__name__)
     case_address = []
-    wenjian_list = []
-    if isinstance(data, dict):#
-        keys = data.keys()#获取data字典中的key
-        keys = list(keys)#转换成list
-        if type(keys) is list:#判断keys是否为list
-            yaml_path = os.path.dirname(os.path.dirname(__file__))#获取上一级目录
+    if isinstance(data, dict):  #
+        keys = data.keys()  # 获取data字典中的key
+        keys = list(keys)  # 转换成list
+        if type(keys) is list:  # 判断keys是否为list
+            yaml_path = os.path.dirname(os.path.dirname(__file__))  # 获取上一级目录
             # for key in keys:
             #     yaml_path = os.path.join(yaml_path, key+'.yaml')
             #     case_address.append(yaml_path)
 
             yaml_path = yaml_path + "/" + wenjianming + "/"
-            file = os.listdir(yaml_path)#打印yaml_path下的文件
-            for filename in file:
-                wenjian_path=os.path.join(yaml_path,filename)
-                wenjian_list.append(wenjian_path)#把yaml_path下的文件路径放入wenjian_list中
+            # file = os.listdir(yaml_path)  # 打印yaml_path下的文件
+            # for filename in file:
+            #     wenjian_path = os.path.join(yaml_path, filename)
+            #     wenjian_list.append(wenjian_path)  # 把yaml_path下的文件路径放入wenjian_list中
+            wenjian_list=start_async(chaxun_wenian(wenjianming=wenjianming))
+            print(wenjian_list)
             for key in keys:
-                filepath = yaml_path + key + '.yaml'
-                logging.info("%s文件地址是%s"%(key,filepath))
-                if filepath in wenjian_list:#判断是否在wenjian_list中
-                    case_address.append(filepath)#是就加入case_address中
+                filepath = yaml_path + key + '_test.yaml'
+                logging.info("%s文件地址是%s" % (key, filepath))
+                if filepath in wenjian_list:  # 判断是否在wenjian_list中
+                    case_address.append(filepath)  # 是就加入case_address中
                 else:
-                    logging.info("%s文件不在wenjian_list中"%key)
+                    logging.info("%s文件不在wenjian_list中" % key)
             return case_address
 
 

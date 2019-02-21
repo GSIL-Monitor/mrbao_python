@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import os
 from Xiaoxiangyoupin.xiaoxiang_common import read_yaml
 
 
@@ -9,17 +10,6 @@ class Get_data():
         '''获取api url'''
         result_content = read_yaml.get_peizhi(wenjianming='xiaoxiang_api', yaml_name=yaml_name,
                                               content_name='xiaoxiang_api_test.yaml')
-        '''        
-        for key in key_list:
-            result = result_content[key]['result']  # 获取api文档结果
-            expected_result = result['expected_result']  # 获取预期结果
-            actual_result = result['actual_result']  # 获取实际结果
-            case_name = result_content[key]['case_name']  # 获取用例名称
-            login_url = result_content[key]['login_url']  # 获取接口url
-            data = result_content[key]['data']  #
-            pass
-            
-            '''
 
         return result_content
 
@@ -47,15 +37,19 @@ class Get_data():
             else:
                 return header
 
-    def get_canshu(self):
-        '''获取请求参数'''
-        pass
+    def get_canshu(self,wenjianming,yaml_path):
+        '''获取用例'''
+        if wenjianming!=None:
+            wenjian_list=read_yaml.start_async(read_yaml.chaxun_wenian(yaml_path,wenjianming))#查询用例路径
+            case_list=read_yaml.start_async(read_yaml.get_path_yaml(wenjian_list))#查询具体用例
+            return case_list
 
-    def save_data(self):
-        '''保存数据'''
+    def jiexi_case(self,*args):
+        '''解析用例'''
         pass
 
 
 if __name__ == '__main__':
     a = Get_data()
-    print(a.get_url(yaml_name='dapaijiangjia'))
+    yaml_path='F:/mrbao_python/Xiaoxiangyoupin'
+    print(a.get_canshu(yaml_path=yaml_path,wenjianming='xiaoxiang_test_case'))
